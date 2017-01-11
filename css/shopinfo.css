@@ -1,0 +1,122 @@
+.color{
+	color:#f5a623;
+}
+.nav{
+	width:720px;
+	height:42px;
+	line-height:42px;
+	margin:12px auto;	
+}
+.nav ul li{
+	float:left;
+	font-size: 21px;
+    font-weight: normal;
+	width:33.3%;
+	height:42px;
+	line-height:42px;
+}
+#second,#third{
+	display:none;
+}
+.form-control {
+    width: 300px !important;
+}
+.stepflex::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.stepflex {
+        display: block;
+        margin: 25px 0 0 0px;
+        text-align: center;
+}
+/*            .stepflex dl.done {
+                border-top-color: #caecb6;
+            }
+*/            .stepflex dl {
+    border-top: 5px solid #ccc;
+    float: left;
+    position: relative;
+    top: -5px;
+    width: 250px;
+}
+/*.stepflex dl.done .s-num {
+    background-position: -47px 0;
+}*/
+.stepflex .s-num {
+    background-image: url(../images/step2013.png);
+    color: #fff;
+    font-weight: 700;
+    height: 23px;
+    line-height: 23px;
+    margin: -15px auto 0;
+    position: relative;
+    width: 23px;
+}
+/*            .stepflex dl.done .s-text {
+                color: #caecb6;
+            }*/
+.stepflex .done s {
+    background-position: -46px -24px;
+}
+.stepflex .first s {
+    background-color: #fff;
+    background-position: 0 -24px;
+}
+.stepflex .done b {
+    background-position: -51px -24px;
+}
+.stepflex b {
+    right: 0;
+}
+.stepflex dl.doing .s-text {
+    color: #7abd54;
+}
+.stepflex .doing.last s, .stepflex .doing.normal s {
+    background-color: #caecb6;
+}
+.stepflex .doing s {
+    background-position: -23px -24px;
+}
+.stepflex .doing b {
+    background-color: #ccc;
+    background-position: -28px -24px;
+}
+.stepflex .doing b, .stepflex .doing s, .stepflex .first s, .stepflex .last b {
+    background-image: url(../images/step2013.png);
+    font-size: 0;
+    height: 5px;
+    line-height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: -5px;
+    width: 5px;
+}
+.stepflex s {
+    left: 0;
+}
+.stepflex dl.doing {
+    border-top-color: #7abd54;
+}
+.stepflex dl.doing .s-num {
+    background-position: -23px 0;
+}
+.katype{
+    width:330px;
+    display: block;
+    height: 44px;
+    padding: 11px 124px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #404040;
+    background-color: #fff;
+    background-image: none;
+    border: 2px solid #f7f9fa;
+    border-radius: 3px;
+}
+.kong{
+	border: none;
+}

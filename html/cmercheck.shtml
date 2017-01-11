@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+        <title>管理平台 | 国有支付 移动应用支付接口</title>
+        <meta name="description" content="国有支付 是全新的支付接入方式，开发者不再需要编写冗长的代码，简单几步就可以让你的应用获拥支付功能。让你的移动应用接入支付像大厦接入电力一样简单。">
+        <meta name="keywords" content="国有支付,支付接口,移动支付,应用内支付,微信支付,银联接口,支付宝接口">
+        <link rel="stylesheet" type="text/css" href="../css/conn.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/shopguan.css" />
+		<link rel="stylesheet" type="text/css" href="../css/cmercheck.css"/>
+    </head>
+    <body style="overflow-y:scroll;">
+
+        <div id="p-body">
+            <div class="defaultPage clearfix">
+                <div class="mainWrap">
+                    <!--#include virtual="menu.html"-->
+                    
+						<div id="p_module_cont" class="mainCon">
+						    <div class="funcArea">
+						        <div class="mc_title">
+						        	<img class="user user1" src="../images/user.png"/><span class="user user2">用户名</span>
+						        	<img class="user" src="../images/out.png"/>
+						            <h2 class="pull-left">商户审核</h2>
+						            <div class="pull-right" style="margin: 23px 32px;">
+						                <span class="menuBtn DHCbtn WL out" style="font-size:18px;cursor: pointer;">退出</span>
+						            </div>
+						        </div>
+                            </div>
+                            <div id="paymentList" class="orderList">
+                                <table>
+                                    <thead class="search" style="border-bottom:1px solid #EDF0F2 !important;background:#fff;">
+                                        <tr>
+                                            <th class="thtype operate">
+                                               <input class="pull-right form-control juli" type="text" id="cmerkey" placeholder="商户简称|ID|联系人|手机号"/>
+                                            </th>  
+                                            <th class="thtype operate">
+                                               <input class="pull-left form-control juli" style="width:80px;cursor: pointer;" type="button" id="shopcheck" value="查询" />
+                                            </th>  
+                                            <th class="thtype operate">
+                                                
+                                            </th>  
+                                            <th class="thtype operate">
+                                                
+                                            </th>  
+                                            <th class="thtype amount">
+                                                
+                                            </th>
+                                            <th class="thtype operate">
+                                               <!-- <a href="addshop.html"><input class="pull-left form-control juli" style="cursor: pointer;width:92px;" type="button"value="添加商户" /></a>-->
+                                            </th>                                            
+                                        </tr>
+                                    </thead>
+                                    <thead>
+                                        <tr>                                            
+                                            <th class="thtype date" style="padding-left:0;">
+                                                商户ID
+                                            </th>
+                                            <th class="thtype date">
+                                                商户简称
+                                            </th>
+                                            <th class="thtype amount ">
+                                                联系人
+                                            </th>
+                                            <th class="thtype detail">
+                                                联系电话
+                                            </th>
+                                            <th class="thtype amount">
+                      审核状态                          
+                                            </th>
+                                            <th class="thtype operate">
+                                             结算时效   
+                                            </th>                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tBody">
+                                    </tbody>
+                                </table>
+                                <div class="tcdPageCode"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="mainFooter">
+                    <span> </span>
+                    <div class="pull-right">
+                        <a href="" class="copyright"></a>
+                    </div>
+                </div>
+            </div>
+        <script type="text/javascript" src="../js/global.js?v=Math.random()" ></script>
+	    <script type="text/javascript" src="../js/mch.js?v=Math.random()" ></script>
+	    <script type="text/javascript" src="../js/mch_global.js?v=Math.random()" ></script>
+	    <script type="text/javascript" src="../js/wth.js?v=Math.random()" ></script>
+        
+        <script type="text/javascript" src="../js/jquery.js?v=Math.random()"></script>
+        <script type="text/javascript" src="../js/jquery.page.js?v=Math.random()"></script>
+        <script type="text/javascript" src="../js/jquery.cookie.js?v=Math.random()" ></script>
+        <script type="text/javascript" src="../js/cmercheck.js?v=Math.random()"></script>
+        <script type="text/javascript" src="../js/baseRequest.js?v=Math.random()"></script>
+        <script type="text/javascript" src="../js/out.js?v=Math.random()"></script>
+     	<script type="text/javascript" src="../js/user_type.js?v=Math.random()"></script>
+        <script type="text/javascript">
+        	CmercheckWork.init();
+        </script>
+    </body>
+</html>

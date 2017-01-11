@@ -1,0 +1,32 @@
+@charset "gb2312";
+    body,div,ul,ol,p,span,a,img,header,nav,article,section,footer,h1{ 
+        margin:0; 
+        padding: 0;
+    }
+    body{ 
+        overflow: hidden;
+    }
+    ul li,ol li{ 
+        list-style: none; 
+        cursor:pointer;
+    }
+    a{ 
+        text-decoration: none;
+    }
+    a:hover{ 
+        color: #f40;
+    }
+    img{ 
+        display: block;
+    }
+/*	@media only screen and (max-width: 1210px) {
+		body{
+			overflow-x: scroll;
+		}
+		.mainCon{
+			min-width: 1210px;
+		}
+	}*/
+	body{
+		overflow-x:scroll;
+}

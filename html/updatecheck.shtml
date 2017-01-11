@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+        <title>管理平台 | 国有支付 移动应用支付接口</title>
+        <meta name="description" content="国有支付 是全新的支付接入方式，开发者不再需要编写冗长的代码，简单几步就可以让你的应用获拥支付功能。让你的移动应用接入支付像大厦接入电力一样简单。">
+        <meta name="keywords" content="国有支付,支付接口,移动支付,应用内支付,微信支付,银联接口,支付宝接口">
+        <link rel="stylesheet" type="text/css" href="../css/conn.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/shopguan.css" />
+		<link rel="stylesheet" type="text/css" href="../css/shopinfo.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/shopcheck.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/updatecheck.css"/>
+    </head>
+    <body style="overflow-y:scroll;">
+
+        <div id="p-body">
+            <div class="defaultPage clearfix">
+                <div class="mainWrap">
+                    <!--#include virtual="menu.html"-->
+                    <div id="p_module_cont" class="mainCon">
+                        <div class="funcArea">
+                            <div class="mc_title">
+                            	<img class="user user1" src="../images/user.png"/><span class="user user2">用户名</span>
+                            	<img class="user" src="../images/out.png"/>
+                                <h2 class="pull-left">升级审核</h2>
+                                <div class="pull-right" style="margin: 23px 32px;">
+                                    <span class="menuBtn DHCbtn WL out" style="font-size:18px;cursor: pointer;">退出</span>
+                                </div>
+                            </div>
+
+                        </div>
+							
+						<div class="content">
+							<div class="head">
+								商户信息
+							</div>
+							<div class="conin">
+								<ul>
+									<li>商户简称<span class="m" id="short_name"></span></li>
+									<li>联系人<span class="mm" id="contact_name"></span></li>
+									<li>手机号码<span class="m" id="contact_phone"></span></li>
+								</ul>
+							</div>
+							<div class="head">
+								升级信息
+							</div>
+							<div class="conin">
+								<ul>
+									<li>商户级别<span class="l" id="level_name"></span><img class="l1" src="../images/to.png"/><span class="l2" id="upgrade_level_name"></span></li>
+									<li>费率<span class="s" id="rate"></span><img class="s1" src="../images/to.png"/><span class="s2" id="upgrade_rate"></span></li>
+								</ul>
+							</div>
+							<textarea class="text" id="content" placeholder="审核结果说明"></textarea>	
+							<div class="b b1">
+								<input type="button" class="button" id="ok" value="审核通过" />
+							</div>
+							<div class="b">
+								<input type="button" class="button button1" name="" id="no" value="未通过" />
+							</div>
+						</div>
+						
+                    </div>
+                </div>
+            </div>
+        </div>
+<script type="text/javascript" src="../js/global.js?v=Math.random()" ></script>
+<script type="text/javascript" src="../js/mch.js?v=Math.random()" ></script>
+<script type="text/javascript" src="../js/mch_global.js?v=Math.random()" ></script>
+<script type="text/javascript" src="../js/wth.js?v=Math.random()" ></script>
+
+<script type="text/javascript" src="../js/jquery.js?v=Math.random()"></script>
+<script type="text/javascript" src="../js/jquery.cookie.js?v=Math.random()" ></script>
+<script type="text/javascript" src="../js/updatecheck.js?v=Math.random()"></script>
+<script type="text/javascript" src="../js/baseRequest.js?v=Math.random()"></script>
+<script type="text/javascript" src="../js/out.js?v=Math.random()"></script>
+<script type="text/javascript" src="../js/user_type.js?v=Math.random()"></script>
+<script type="text/javascript">
+	UpdatecheckWork.init();
+</script>
+    </body>
+</html>

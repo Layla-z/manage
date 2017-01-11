@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="GB2312">
+		<title>管理平台 | 国有支付</title>
+	    <meta name="description" content="国有支付 的聚合支付 SDK 让你在 app 和网站中轻松加入支付功能。一次申请开通多个支付渠道，一次接入所有平台和支付方式，一站管理所有交易。"/>
+	    <meta name="keywords" content="国有支付,支付接口,移动支付,应用内支付,微信支付,银联接口,支付宝接口"/>
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+	    <link rel="stylesheet" type="text/css" href="css/conn.css" />
+	    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+	    <link rel="stylesheet" type="text/css" href="css/login.css"/>
+	    <link rel="shortcut icon" href="favicon.ico"/>
+</head>
+<body onkeydown="Login.bindEnter(event)">
+<div class="i_login">
+    <img class="logo1" src="images/apple-icon-96x96-precomposed.png"/>
+    <div class="il_wrap" id="il_wrap">
+        <div class="il_box">
+            <div class="il_body">
+                <h4>登 录</h4>
+                <div class="form-group">
+                    <input class="form-control" id="uin" maxlength="11" autofocus type="text" placeholder="请输入手机号" />
+                    <span id="userkong">手机号不能为空</span>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" id="pwd" type="password" placeholder="请输入密码" />
+                    <span id="passkong">密码不能为空</span>
+                </div>
+                <span style="font-size:14px; color:red; text-align:center;" id="login-msg"></span>
+                <a href="html/forgetpassword.html" class="retrieve">忘记密码</a>
+            </div>
+            <div class="il_btn">
+                <button type="submit" id="btn_login" class="btn btnBlack btn-block">登  录</button>
+            </div>
+<!--            <div class="il_btn">
+                <button type="submit" id="register" class="btn btnBlack btn-block">注  册</button>
+            </div>-->
+        </div>
+    </div>
+    <div class="il_footer" id="il_footer">
+        <div class="wrapper">
+            <div class="icp pull-right">
+                深圳市南山区高新中区讯美科技3座13楼13B <a href="#">&copy; 国有支付</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+	    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script> 
+	    <script type="text/javascript" src="js/global.js" ></script>
+	    <script type="text/javascript" src="js/mch.js" ></script>
+	    <script type="text/javascript" src="js/mch_global.js" ></script>
+	    <script type="text/javascript" src="js/wth.js" ></script>
+	    <script type="text/javascript" src="js/login.js" ></script>
+	    <script type="text/javascript" src="js/3des.js" ></script>
+	    <script type="text/javascript" src="js/base64.js"></script>
+	    <script type="text/javascript">
+	    	Login.init();       
+		</script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>管理平台 | 国有支付 移动应用支付接口</title>
+    <meta name="description" content="国有支付 是全新的支付接入方式，开发者不再需要编写冗长的代码，简单几步就可以让你的应用获拥支付功能。让你的
+移动应用接入支付像大厦接入电力一样简单。">
+    <meta name="keywords" content="国有支付,支付接口,移动支付,应用内支付,微信支付,银联接口,支付宝接口">
+    <link rel="stylesheet" type="text/css" href="../css/conn.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/shopguan.css" />
+    <link rel="stylesheet" type="text/css" href="../css/fee.css"/>
+	<!--#include virtual="/inc/css/global/global.html"-->
+	<!--#include virtual="/inc/js/mch.html"-->
+	<!--#include virtual="/inc/js/wth.html"-->
+	<!--#include virtual="/inc/js/box.html"-->
+	<!--#include virtual="/inc/js/global.html"-->
+	<!--#include virtual="/inc/js/mch_global.html"-->
+    <script type="text/javascript" src="/js/mch.js?v=20140416"></script>
+    <script type="text/javascript" src="/js/public_fun.js?v=20140418"></script>
+    <script type="text/javascript" src="/js/mch_select.js?v=20140416"></script>
+    <script type="text/javascript" src="/js/popup.js?v=20130709"></script>
+ <!--   <script type="text/javascript" src="/js/jquery-1.7.2.min.js?v=20140416"></script>-->
+    <script type="text/javascript" src="../js/WdatePicker.js" ></script>
+    
+     <script type="text/javascript" src="/manage/js/jquery.js?v=Math.random()"></script>
+        <script type="text/javascript" src="/manage/js/jquery.page.js?v=Math.random()"></script>
+        <script type="text/javascript" src="/manage/js/jquery.cookie.js?v=Math.random()" ></script>
+    <script type="text/javascript" src="../js/clean_t.js" ></script>
+  
+    <link href="/inc/css/mercss.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../css/clean.css"/>
+	<style type="text/css">
+		.Wdate {
+		    width: 96px;
+		    padding: 2px;
+		    height: 32px !important;
+		}
+	</style>
+</head>
+
+<body class="freeze-query">
+   <div id="p-body">
+            <div class="defaultPage clearfix">
+                <div class="mainWrap">
+                    <!--#include virtual="menu.html"-->
+                    
+						<div id="p_module_cont" class="mainCon">
+						    <div class="funcArea">
+						        <div class="mc_title">
+						        	<img class="user user1" src="../images/user.png"/><span class="user user2">用户名</span>
+						        	<img class="user" src="../images/out.png"/>
+						            <h2 class="pull-left">客户清算</h2>
+						            <div class="pull-right" style="margin: 23px 32px;">
+						                <span class="menuBtn DHCbtn WL out" style="font-size:18px;cursor: pointer;">退出</span>
+						            </div>
+						        </div>
+                            </div>
+                            <div id="paymentList" class="orderList">
+                               <div class="container" style=" width:96%;">
+
+    <div class="query-condition">
+        <div class="form">
+            <table >
+                <tr>
+                    <th scope="row" class="start_time">开始时间：</th>
+                    <td>
+                        <span class="calendar-ctrl">
+                           <!-- <input id="trade_time_a"  type="text" class="text short" readonly/>
+                            <span class="ico-calendar" id="startCalenderIco"></span>-->
+                            
+                            <input class="Wdate startdate" id="trade_time_a" style="border: 2px solid #f7f9fa;" type="text" onClick="WdatePicker()">
+                        </span>
+                    </td>
+                    <th scope="row" class="end_time">结束时间：</th>
+                    <td>
+                        <span class="calendar-ctrl">
+                           <!-- <input id="trade_time_b"  type="text" class="text short" readonly/>
+                            <span class="ico-calendar" id="endCalenderIco"></span> -->
+                            <input
+										class="Wdate enddate" id="trade_time_b"
+										style="border: 2px solid #f7f9fa;" type="text"
+										onClick="WdatePicker()">
+                        </span>
+                    </td>
+                    <th scope="row" class="">客户：</th>
+                    <td>
+                        <span class="">
+                            <input id="other_uin"  type="text" class="text short" placeholder="请输入客户号"/>
+
+                        </span>
+                    </td>
+                    <th scope="row" class="">用户状态：</th>
+                     <td>
+                        <span class="">
+                            
+                            <select id="state_list"  type=" class="short">
+                            	<option value=''>请选择</option>
+                            	<option value='1'>已到帐</option>
+                                <option value='2'>提现失败</option>
+                                <option value='3'>已提交(未审核)</option>
+                                <option value='4'>已审核</option>
+                                <option value='5'>已导出</option>
+                            </select>
+                            <span class="" id=""></span>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                   <!-- <th scope="row"></th>
+                    <td><span class="default-btn"><input type="button" class="button orange" id="income" value="充值记录" /></span></td>-->
+                    <th scope="row"></th>
+                    <td><span class="default-btn"><input type="button" class="button orange" id="outcome" value="清算记录查询" /></span></td>
+                    <th scope="row"></th>
+                    <td><span class="default-btn"><input type="button" class="button orange" id="outcome_output" value="清算记录导出" /></span></td>
+                    <th scope="row"></th>
+                    <td><span class="default-btn"><input type="button" class="button orange" id="upload" value="清算记录上传" /></span></td>
+                     <th scope="row"></th>
+                    <td><span class="default-btn">
+                    <form id='uploadForm' action="/cgi-bin/up_custom_pay_list.cgi?up_mode=1" method="post" target="getUploadXML" enctype="multipart/form-data">
+                    <input type="file" class="orange" id="outcome_input" value="导入取现文件" style='width:180px;' name='filecsv'/>
+                    <input type="hidden" name="name" id="nameimport"/>
+                    <input type="hidden" name="file_name" id="filename"/>
+                    </form></span></td>
+                     
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!--弹出内容开始-->
+		            <div id="popDiv" class="mydiv" style="display: none;">
+		           <div class="SContent-box">
+		
+		        <div class="my-title" id="examine">提现审核<div style=" float:right"><a href="#" id="close_"  style="display:block; cursor:pointer">[关闭]</a></div> </div>
+		           <div class="my-txt">
+		           <table width="100%" border="0" cellspacing="0" cellpadding="5">
+		           <tr>
+		    <td height="40" align="right">审核人</td>
+		    <td>
+		    <input type="text" id="realName" class='my-input' disabled='disabled'/>
+		        
+		    </td>
+		  </tr>
+		  <tr>
+		    <td height="40" align="right">原因</td>
+		    <td>
+		    <input type="hidden" id="trans_id"/>
+		        <textarea style="width: 100%;height: 60px;" id='reason' class='my-input'></textarea>
+		    </td>
+		  </tr>
+		  
+		  <tr>
+		    <td height="40" align="right"></td>
+		            
+		    <td><input type="button" class="my_btn" value="通过" id="submit_ok"/>&nbsp;&nbsp;
+		    	<input type="button" class="my_btn" value="不通过" id="submit_no"/>&nbsp;&nbsp;<input type="button" class="my_huibtn" value="取 消" id="cancel_"/></td>
+		  </tr>
+		</table>
+		</div>
+		           <div class="my-tishi" style="display:none">输入有误，请重新输入</div>
+		           </div>
+		
+		           </div>
+		           <div id="bg4" class="bg" style="display: none;"></div>
+		          <!--
+		  	
+		  -->
+		  <!--表格头-->
+		  
+		  <!--表格结束-->
+		    <div class="query-result hide" id="query_result">
+		         <div class="table tab-content" id="listquery_data" style="overflow:auto; padding-top:30px;">
+		        	<table>
+		        		 <tr>                                            
+                            <th class="thtype date" style="padding-left:0;">流水号</th> 
+                            <th class="thtype date">提现手续费 </th> 
+                            <th class="thtype amount ">	实际到帐金额</th> 
+                            <th class="thtype operate">提现金额</th>
+                            <th class="thtype detail">创建时间</th>
+                            <th class="thtype amount">用户状态</th>
+                            <th class="thtype amount"><pre>      </pre></th>
+                            
+                         </tr>
+                       </thead>
+                      <tbody id="tBody"></tbody>
+		        	</table>
+		            <!--#include virtual="/inc/html/global/data_err_show.html"-->
+		        </div>
+		         <div class="tcdPageCode"></div> 
+		        
+		        <!-- 翻页[[ -->
+		       <div class="page page-align-right" id="pager">
+		            <div class="page-wrap">
+		                <div class="page-links">
+		                    <a class="page-disabled" href="#" id="page_up">上一页</a>
+		                    <span>|</span>
+		                    <a href="#" id="page_down">下一页</a>
+		                </div>
+		            </div>
+		        </div>
+		        <!-- 翻页]] -->
+		    </div>         
+		</div>                   
+		</div>
+    <!--弹出内容结束-->
+ </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="mainFooter">
+                    <span> </span>
+                    <div class="pull-right">
+                        <a href="#" class="copyright"></a>
+                    </div>
+                </div>
+                 
+
+</div> 
+<iframe name="getUploadXML" id="getUploadXML" src="" class="hide" 
+               onload="Record.showXMLMsg(window.frames['getUploadXML']);"></iframe>
+		
+		<script type="text/javascript">
+			var j=jQuery.noConflict();
+			   Record.init();
+		</script>
+        <script type="text/javascript" src="/js/3des.js?v=20130228"></script>
+       
+       
+     <script type="text/javascript">
+		  var $j=jQuery.noConflict();
+		</script>
+		<script type="text/javascript" src="/auth/js/out.js?v=Math.random()"></script>
+		<script type="text/javascript" src="/auth/js/user_type.js?v=Math.random()"></script>
+</body>
+</html>

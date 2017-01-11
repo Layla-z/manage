@@ -1,0 +1,82 @@
+<div class="sideBar">
+    <div class="appSwitch active" id="app_menu">
+        <div class="menuBtn">
+            <div class="mb_appName">
+            	<img src="../images/apple-icon-96x96-precomposed.png" class="block" width="48" height="48" alt="">
+            </div>
+        </div>
+    </div>
+    <div id="module_menu">
+
+        <a href="../html/gailan.shtml">
+        	<div class="title">
+            	<img class="bgimg" src="../images/ganlan.png"/>交易概览
+        	</div>
+        </a>
+         <div class="title title1">
+         	<img class="bgimg" src="../images/shop.png"/>
+            商户管理
+        </div>
+        <ul class="titleone">
+            <li data-module="batchpayment" class="bar_item">
+            	<a href="../html/shopcheck.shtml">商户查询</a>
+            </li>
+            <li data-module="batchpayment" class="bar_item">
+            	<a href="../html/shopinfo.shtml" class="user_type20">商户信息</a>
+            </li>
+            <li data-module="batchpayment" class="bar_item">
+            	<a href="../html/cmercheck.shtml" class="user_type">商户审核</a>
+            </li>
+            <li data-module="batchpayment" class="bar_item">
+            	<a href="../html/shopcode.shtml">商户收款码</a>
+            </li>
+            <li data-module="batchpayment" class="bar_item">
+            	<a href="../html/updaterecord.shtml" >商户升级</a>
+            </li>
+        </ul> 
+        <div class="title title2">
+        	<img class="bgimg" src="../images/change.png"/>
+            交易管理
+        </div>
+        <ul class="titletwo">
+            <li data-module="orderreview" id="liucha" class="bar_item">
+            	<a href="../html/liushui.shtml" >
+   交易查询
+                    </a>
+            </li>
+            
+        </ul>
+         <!--<div class="title">
+            支付通道
+        </div>
+        <ul>
+            <li data-module="orderreview" class="bar_item">
+            <a href="tongcheck.html" class="">
+                    通道查询
+            </a>
+            </li>
+        </ul> -->
+        <div class="title title3">
+        	<img class="bgimg" src="../images/zhan.png"/>
+            财务对账
+        </div>
+        <ul class="titlethree">
+            <li data-module="orderreview" id="liucha" class="bar_item">
+            <a href="../html/fee.shtml" >
+                    分润统计
+            </a>
+            </li>
+        </ul>
+        <div class="title title4">
+        	<img class="bgimg" src="../images/wepay.png"/>
+           账户管理 
+        </div>
+        <ul class="titlefour">
+            <li data-module="orderreview" id="liucha" class="bar_item">
+            <a href="../../auth/security.shtml" >
+                    安全中心 
+            </a>
+            </li>
+        </ul>
+    </div>
+</div>

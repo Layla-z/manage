@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="GB2312">
+		<title>管理平台 | 国有支付 移动应用支付接口</title>
+        <meta name="description" content="国有支付 是全新的支付接入方式，开发者不再需要编写冗长的代码，简单几步就可以让你的应用获拥支付功能。让你的移动应用接入支付像大厦接入电力一样简单。">
+        <meta name="keywords" content="国有支付,支付接口,移动支付,应用内支付,微信支付,银联接口,支付宝接口">
+        <meta name="save" content="history">
+        <link rel="stylesheet" type="text/css" href="../css/shopguan.css" />
+        <link rel="stylesheet" type="text/css" href="../css/shopresult.css"/>
+    </head>
+<body class="popopen">
+    <div class="fullHead in" style="display: block;">
+        <div class="fullHeadWrap">
+            <div class="backWrap" style="display:none">
+                <span class="icon icon-arrow-left-lg"></span>
+            </div>
+            <a href="../html/shopcheck.shtml"><div class="closeWrap" style="font-size:16px;">
+                返回商户
+            </div></a>
+            <div class="fullTitle">添加商户</div>
+        </div>
+    </div>
+    
+
+
+    <div id="p_frame" class="pop in" style="display: block;">
+        <div class="popwrap popFull">
+            <div class="fullWrap wrapper">        
+            <div class="orgType">
+            	<div class="text-center btn-group">
+                    <img src="../images/succe.png" style="width: 46px;height: 46px;"/>
+                </div>
+                <div class="text-center btn-group">
+                    <span style="color: #333;font-size: 25px;">添加成功</span>
+                </div>
+                <div class="text-center btn-group">
+                    <span style="color: #ccc;font-size: 14px;">请等待验证</span>
+                </div>
+                <div id="org_companyInfo" class="tree tree1" style="text-align: center;">
+                    <div class="row treerow">
+                        <div class="chapter">
+                            <div class="row text-center">
+                                <div class="subtitle">
+                                    <h4 style="color: #333;font-size: 16px;">商户号</h4>
+                                </div>
+                                <div class="section">
+                                    <input style="width: 220px;border: none !important;" type="text" class="form-control new_uid">
+                                </div>
+                            </div>
+                            <div class="row text-center">
+                                <div class="subtitle">
+                                    <h4 style="color: #333;font-size: 16px;">商户全称</h4>
+                                </div>
+                                <div class="section">
+                                    <input style="width: 220px;border: none !important;" type="text" class="form-control short_name">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+				<div class="text-center btn-group">
+                    
+                </div>
+                <div class="text-center btn-group">
+                    <a href="javascript:closePage();"><button class="btn btnDashboard">关闭</button></a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/shopresult.js"></script>
+    <script type="text/javascript">
+    	ShopresultWork.init();
+    </script>
+    </body>
+</html>

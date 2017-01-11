@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+        <title>管理平台 | 国有支付 移动应用支付接口</title>
+        <meta name="description" content="国有支付 是全新的支付接入方式，开发者不再需要编写冗长的代码，简单几步就可以让你的应用获拥支付功能。让你的移动应用接入支付像大厦接入电力一样简单。">
+        <meta name="keywords" content="国有支付,支付接口,移动支付,应用内支付,微信支付,银联接口,支付宝接口">
+        <link rel="stylesheet" type="text/css" href="../css/conn.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/shopguan.css" />
+		<!--<link rel="stylesheet" type="text/css" href="../css/shopinfo.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/shopcheck.css"/>-->
+		<link rel="stylesheet" type="text/css" href="../css/shopresult.css"/>
+    </head>
+    <body style="overflow-y:scroll;">
+
+        <div id="p-body">
+            <div class="defaultPage clearfix">
+                <div class="mainWrap">
+                    <!--#include virtual="menu.html"-->
+                    <div id="p_module_cont" class="mainCon">
+                        <div class="funcArea">
+                            <div class="mc_title">
+                            	<img class="user user1" src="../images/user.png"/><span class="user user2">用户名</span>
+                            	<img class="user" src="../images/out.png"/>
+                                <h2 class="pull-left">添加结算信息</h2>
+                                <div class="pull-right" style="margin: 23px 32px;">
+                                    <span class="menuBtn DHCbtn WL out" style="font-size:18px;cursor: pointer;">退出</span>
+                                </div>
+                            </div>
+
+                            </div>
+							
+							
+							<div class="fullWrap wrapper">        
+            <div class="orgType">
+            	<div class="text-center btn-group">
+                    <img src="../images/succe.png" style="width: 46px;height: 46px;margin: 0 auto;"/>
+                </div>
+                <div class="text-center btn-group">
+                    <span style="color: #333;font-size: 25px;">添加成功</span>
+                </div>
+                <div class="text-center btn-group">
+                    <span style="color: #ccc;font-size: 14px;">请等待验证</span>
+                </div>
+                <div id="org_companyInfo" class="tree tree1" style="text-align: center;height: 200px;
+">
+                    <div class="row treerow">
+                        <div class="chapter">
+                            <div class="row text-center">
+                                <div class="subtitle">
+                                    <h4 style="color: #333;font-size: 16px;">商户号</h4>
+                                </div>
+                                <div class="section">
+                                    <input style="width: 220px;border: none !important;" type="text" class="form-control new_uid">
+                                </div>
+                            </div>
+                            <div class="row text-center">
+                                <div class="subtitle">
+                                    <h4 style="color: #333;font-size: 16px;">商户全称</h4>
+                                </div>
+                                <div class="section">
+                                    <input style="width: 220px;border: none !important;" type="text" class="form-control short_name">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+				<div class="text-center btn-group">
+                    
+                </div>
+                <div class="text-center btn-group">
+                    <a href="javascript:closePage();"><button class="btn btnDashboard">关闭</button></a>
+                </div>
+            </div>
+            </div>
+            
+							
+                        </div>
+                    </div>
+                </div>
+
+            </div>  
+
+		    <script type="text/javascript" src="../js/jquery.js"></script>
+		    <script type="text/javascript" src="../js/shopresult.js"></script>
+		    <script type="text/javascript" src="../js/jquery.cookie.js?v=Math.random()" ></script>
+	    	<script type="text/javascript" src="../js/out.js?v=Math.random()"></script>
+     		<script type="text/javascript" src="../js/user_type.js?v=Math.random()"></script>
+		    <script type="text/javascript">
+		    	ShopresultWork.init();
+		    </script>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+.show{
+    width:9% !important;
+    text-align: center;
+    
+}
+
+#tBody tr td{
+    text-align: center;
+}
+#tBody tr:nth-child(even){
+    background:#F7F9FA;
+}
+#tBody tr:hover{
+    background:#f5a623;
+    color:#fff;
+    cursor:pointer;
+}
+.tcdPageCode a{ text-decoration:none;}
+.tcdPageCode a:hover{ text-decoration:none;}
+.tcdPageCode{margin-top: 45px;;text-align: center;color: #ccc;}
+.tcdPageCode a{display: inline-block;color: #f5a623;display: inline-block;height: 25px; line-height: 25px;  padding: 0 10px;border: 1px solid #ddd; margin: 0 2px;border-radius: 4px;vertical-align: middle;}
+.tcdPageCode a:hover{text-decoration: none;border: 1px solid #f5a623;}
+.tcdPageCode span.current{display: inline-block;height: 25px;line-height: 25px;padding: 0 10px;margin: 0 2px;color: #fff;background-color: #f5a623; border: 1px solid #f5a623;border-radius: 4px;vertical-align: middle;}
+.tcdPageCode span.disabled{ display: inline-block;height: 25px;line-height: 25px;padding: 0 10px;margin: 0 2px; color: #bfbfbf;background: #f2f2f2;border: 1px solid #bfbfbf;border-radius: 4px;vertical-align: middle;}
+.mainCon {
+    position: relative;
+}
+.tcdPageCode {
+    color: #ccc;
+    position: absolute;
+    bottom: 61px;
+    left: 40%;
+    margin: 0 auto;
+}
+.form-control{
+    width:166px;
+}
+.juli{
+    margin: 16px 15px;
+    color:#f5a623;
+}
+#check{
+    width:100px;
+    cursor:pointer;
+    font-size: 16px;
+}
+#goBack{
+    width:100px;
+    height:48px;
+    line-height: 48px;
+    cursor:pointer;
+    border-color:#f5a623;
+    font-size: 18px;
+    margin: 20px auto;
+    padding:0;
+    color:#f5a623;
+}

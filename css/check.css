@@ -1,0 +1,50 @@
+* {margin : 0;top : 0;}
+		body {/*margin: 10px;*/background-color: #FFFFFF;}
+		a:hover {text-decoration : none;}
+	/*	.container {border : 1px solid #EEEEEE;}*/
+		.detail {height: 40px;font-size: 22px;font-weight:bold;padding-top:10px;padding-left: 10px;background-color:#EEEEEE;color: #666666;max-height:50px;display:block;}
+		.button {width: 100px;display: inline-block;zoom: 1;*display: inline;padding: .5em;font: 14px/100% Arial, Helvetica, sans-serif;box-shadow: 0 1px 2px rgba(0,0,0,.2);-webkit-border-radius: .5em;-moz-border-radius: .5em;border-radius: .5em;outline: none;text-align: center;text-decoration: none;}
+		.button:hover {text-decoration: none;}
+		.button:active {position: relative;top: 1px;}
+		.orange {background : #FF8800;color: white;text-shadow: 0 1px 1px rgba(0,0,0,.3);font-weight: bold;border: solid 1px #FF9900;}
+		.orange:active {color: #FF9900;position: relative;text-decoration: none;top: 1px;}
+		.orange:hover {color: #EEEEEE;text-decoration: none;border:solid 1px #FF8800;}
+		.form {background-color: #F5F5F4;height:80px;}
+		.record_other{font-size:15px;font-weight:normal;margin-right:6px;}
+		.main-right{height: auto;}
+.my_btn {
+    background: #F90;
+    border-radius: 3px;
+    border: none;
+    text-align: center;
+    color: #fff;
+    line-height: 35px;
+    height: 35px;
+    font-family: "Microsoft Yahei";
+    padding: 0px 20px;
+}	
+.query-condition {
+     background-color: #F5F5F4;
+}
+.form-control {
+    display: block;
+    width: 45%;
+    height: 44px;
+    padding: 11px 16px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #404040;
+    background-color: #fff;
+    background-image: none;
+    border: 2px solid #f7f9fa;
+    border-radius: 3px;
+    transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
+    -webkit-transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
+    -moz-transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
+    -ms-transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
+    -o-transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
+    -webkit-appearance: none;
+}
+.query-condition table {
+    width: 45%;
+}	

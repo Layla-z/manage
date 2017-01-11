@@ -1,0 +1,252 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+        <title>管理平台 | 国有支付 移动应用支付接口</title>
+        <meta name="description" content="国有支付 是全新的支付接入方式，开发者不再需要编写冗长的代码，简单几步就可以让你的应用获拥支付功能。让你的移动应用接入支付像大厦接入电力一样简单。">
+        <meta name="keywords" content="国有支付,支付接口,移动支付,应用内支付,微信支付,银联接口,支付宝接口">
+        <link rel="stylesheet" type="text/css" href="../css/conn.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/shopguan.css" />
+		<link rel="stylesheet" type="text/css" href="../css/shopinfo.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/shopcheck.css"/>
+    </head>
+    <body style="overflow-y:scroll;">
+
+        <div id="p-body">
+            <div class="defaultPage clearfix">
+                <div class="mainWrap">
+                    <!--#include virtual="menu.html"-->
+                    <div id="p_module_cont" class="mainCon">
+                        <div class="funcArea">
+                            <div class="mc_title">
+                            	<img class="user user1" src="../images/user.png"/><span class="user user2">用户名</span>
+                            	<img class="user" src="../images/out.png"/>
+                                <h2 class="pull-left">商户信息</h2>
+                                <div class="pull-right" style="margin: 23px 32px;">
+                                    <span class="menuBtn DHCbtn WL out" style="font-size:18px;cursor: pointer;">退出</span>
+                                </div>
+                            </div>
+
+                            </div>
+							
+							<div class="nav">
+								<ul>
+									<li class="color">商户信息</li>
+									<li class="shopman">商户联系人</li>
+									<li>结算信息</li>
+								</ul>
+							</div>
+							
+							<div class="fullWrap wrapper">        
+					            <div class="orgType">
+					                <div id="org_companyInfo" class="tree tree1">
+					                    
+					                    <div id="first" class="row treerow">
+					                        <div class="title">
+					                            <h3></h3>
+					                        </div>
+					                        <div class="chapter">
+					                            <div class="row">
+					                                <div class="subtitle">
+					                                    <h4>商户全称</h4>
+					                                </div>
+					                                <div class="section">
+					                                    <input id="name" type="text" class="form-control kong">
+					                                </div>
+					                            </div>
+					                            <div class="row">
+					                                <div class="subtitle">
+					                                    <h4>商户简称</h4>
+					                                </div>
+					                                <div class="section">
+					                                    <input id="short_name" type="text" class="form-control kong">
+					                                </div>
+					                            </div>
+					                            <div class="row">
+					                                <div class="subtitle">
+					                                    <h4>商户类型</h4>
+					                                </div>
+					                                <div class="section">
+					                                    <input id="cmer_level" type="text" class="form-control kong">
+					                                </div>
+					                            </div>
+					                            <div class="row">
+					                                <div class="subtitle">
+					                                    <h4 data-toggle="tooltip" data-placement="top" data-html="true">公司注册地址 </h4>
+					                                </div>
+					                                <div class="section">
+					                                    <input id="reg_address" type="text" class="form-control kong">
+					                                </div>
+					                            </div>
+					                            <div class="row">
+					                                <div class="subtitle">
+					                                    <h4>公司联系地址</h4>
+					                                </div>
+					                                <div class="section ot_city_select">
+					                                    
+					                                    <input id="address" type="text" class="form-control kong">
+					                                </div>
+					                            </div>
+					                            <div class="row">
+					                                <div class="subtitle">
+					                                    <h4>公司营业执照</h4>
+					                                </div>
+					                                <div class="section">
+					                                    <input id="business_license" type="text" class="form-control kong">
+					                                </div>
+					                            </div>
+					                            <div class="row">
+					                                <div class="subtitle">
+					                                    <h4>支付方式</h4>
+					                                </div>
+					                                <div class="section">
+					                                    <input id="pm_id" type="text" class="form-control kong">
+					                                </div>
+					                            </div>
+					                            <div class="row">
+					                                <div class="subtitle">
+					                                    <h4>费率</h4>
+					                                </div>
+					                                <div class="section">
+					                                    <input id="rate" type="text" class="form-control kong">
+					                                </div>
+					                            </div>
+					
+					                        </div>
+					                    </div>
+					                    
+					                    <div id="second" class="tree tree1">
+					                    <div class="row treerow">
+					                        <div class="title">
+					                            <h3></h3>
+					                        </div>
+					                        <div class="chapter">
+					                            <div class="row">
+					                                <div class="subtitle">
+					                                    <h4>姓名</h4>
+					                                </div>
+					                                <div class="section">
+					                                    <input id="contact_name" type="text" class="form-control kong">
+					                                </div>
+					                            </div>
+					                            <div class="row">
+					                                <div class="subtitle">
+					                                    <h4>手机号码</h4>
+					                                </div>
+					                                <div class="section">
+					                                    <input id="contact_phone" type="text" class="form-control kong">
+					                                </div>
+					                            </div>
+					                            <div class="row">
+					                                <div class="subtitle">
+					                                    <h4>邮箱地址</h4>
+					                                </div>
+					                                <div class="section">
+					                                    <input id="contac_tmail" type="text" class="form-control kong">
+					                                </div>
+					                            </div>
+					                        </div>
+					                    </div>
+					                </div> 
+					                
+					                <div id="third" class="row treerow">
+					                        <div class="title">
+					                            <h3></h3>
+					                        </div>
+					                        <div class="chapter">
+					                            <div class="row">
+					                                <div class="subtitle">
+					                                    <h4>账户类型</h4>
+					                                </div>
+					                                 <div class="section">
+					                                    <input id="card_type" type="text" class="form-control kong">
+					                                </div>
+					                            </div>
+					                            
+					                            <div class="row">
+					                                <div class="subtitle">
+					                                    <h4>开户银行</h4>
+					                                </div>
+					                                <div class="section">
+					                                    <input id="bank_name" type="text" class="form-control kong">
+					                                </div>
+					                            </div>
+					                            <div class="row">
+					                                <div class="subtitle">
+					                                    <h4>开户银行省市</h4>
+					                                </div>
+					                                <div class="section">
+					                                    <input id="provice_name" style="width: 100px;" type="text" class="form-control kong">
+					                                    <input id="city_name" style="width: 100px;" type="text" class="form-control kong">
+					                                </div>
+					                            </div>
+					                            <div class="row">
+					                                <div class="subtitle">
+					                                    <h4>银行卡号</h4>
+					                                </div>
+					                                <div class="section">
+					                                    <input id="card_no" type="text" class="form-control kong">
+					                                </div>
+					                            </div>
+					                            <div class="row">
+					                                <div class="subtitle">
+					                                    <h4>开户姓名</h4>
+					                                </div>
+					                                <div class="section">
+					                                    <input id="card_name" type="text" class="form-control kong">
+					                                </div>
+					                            </div>
+					                          
+					                            <div class="row">
+					                                <div class="subtitle">
+					                                    <h4>手机号码</h4>
+					                                </div>
+					                                <div class="section ot_city_select">
+					                                    <input id="mobile" type="text" class="form-control kong">
+					                                </div>
+					                            </div>
+					                            <div class="row">
+					                                <div class="subtitle">
+					                                    <h4>身份证号码</h4>
+					                                </div>
+					                                <div class="section">
+					                                    <input id="id_card" type="text" class="form-control kong">
+					                                </div>
+					                            </div>
+					                            </div>
+					                        </div>
+					                    </div>
+					                </div>
+					
+					            </div>
+            
+            
+							
+                        </div>
+                    </div>
+                </div>
+<!--
+
+                <div class="mainFooter">
+                    <span> </span>
+                    <div class="pull-right">
+                        <a href="" class="copyright"></a>
+                    </div>
+                </div>-->
+            </div>  
+        <script type="text/javascript" src="../js/global.js?v=Math.random()" ></script>
+		<script type="text/javascript" src="../js/mch.js?v=Math.random()" ></script>
+	    <script type="text/javascript" src="../js/mch_global.js?v=Math.random()" ></script>
+	    <script type="text/javascript" src="../js/wth.js?v=Math.random()" ></script>
+	    
+	    <script type="text/javascript" src="../js/jquery.js?v=Math.random()"></script>
+	    <script type="text/javascript" src="../js/shopinfo.js?v=Math.random()"></script>
+	    <script type="text/javascript" src="../js/baseRequest.js?v=Math.random()"></script>
+        <script type="text/javascript" src="../js/user_type.js?v=Math.random()"></script>
+        <script type="text/javascript" src="../js/jquery.cookie.js?v=Math.random()" ></script>
+        <script type="text/javascript" src="../js/out.js?v=Math.random()"></script>
+	    <script type="text/javascript">
+	        ShopinfoWork.init();
+	    </script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+.position{
+	position: relative;
+}
+.po {
+	position: absolute;
+	left: 0px;
+	top:12px;
+    width: 50px !important;
+    float: left;
+}
+.po1{
+	left: 40%;
+}
+.po2{
+	    left: 83%;
+}
+.po3{
+	left: 113%;
+}
+/*.spos{
+	position: absolute;
+	left: 0;
+	top:30px;
+}
+.spos1{
+	position: absolute;
+	left: 0;
+	top:30px;
+}*/
+.orderList table thead:nth-child(2) {
+    background-color: #F9F9F9;
+}
+.orderList table thead:nth-child(3) {
+    background-color: #F78A8A;
+}
+.orderList table thead:nth-child(2) tr th{
+	color:#76858c !important;
+	padding: 12px 8px;
+}
+.orderList table thead:nth-child(3) tr th{
+	color:#fff !important;
+	padding: 4px 8px;
+}

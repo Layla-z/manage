@@ -1,0 +1,96 @@
+.content{
+	width: 500px;
+	height: 770px;
+	margin: 50px auto 0;
+}
+.head{
+	border-bottom: 1px solid #8b572a;
+	color: #8b572a;
+	font-size: 16px;
+}
+.conin{
+	width: 500px;
+	
+}
+.conin ul li{
+	width: 500px;
+    height: 50px;
+    line-height: 80px;
+    font-size: 16px;
+    color: #333333;
+    text-align: left;
+}
+.conin ul li:last-child{
+	margin-bottom: 50px;
+}
+.conin ul li img{
+	width: 25px;
+	height: 15px;
+	display: inline-block;
+}
+.m{
+	margin-left: 90px;
+}
+.mm{
+	margin-left: 107px;
+}
+.m,.mm{
+	font-size:14px;
+	color:#666666;
+}
+.l{
+	margin-left: 56px;
+}
+.l1{
+    margin-left: 80px;	
+}
+.l2{
+    margin-left: 60px;	
+}
+.s{
+	margin-left: 90px;
+}
+.s1{
+    margin-left: 63px;	
+}
+.s2{
+    margin-left: 60px;	
+}
+.l,.s{
+	font-size:14px;
+	color:#666666;
+}
+.l2,.s2{
+	font-size:14px;
+	color:#3c8ce3;
+}
+.text{
+	width: 500px;
+	height: 84px;
+	border: 1px solid #ccc;
+}
+.b{
+	width: 500px;
+	height: 45px;
+}
+.b1{
+	margin: 40px 0;
+}
+.button{
+	background:#3c8ce3;
+	border:1px solid #eeeeee;
+	border-radius:5px;
+	width:123px;
+	height:43px;
+	margin: 0 auto;
+	display: block;
+	color: #fff;
+}
+.button1{
+	background:#eeeeee;
+	border:1px solid #eeeeee;
+	border-radius:5px;
+	width:123px;
+	height:43px;
+	color: #666;
+}

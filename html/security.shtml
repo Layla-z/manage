@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="gb2312">
+    <title>管理平台 | 国有支付 移动应用支付接口</title>
+    <meta name="description" content="国有支付 是全新的支付接入方式，开发者不再需要编写冗长的代码，简单几步就可以让你的应用获拥支付功能。让你的移动应用接入支付像大厦接入电力一样简单。">
+    <meta name="keywords" content="国有支付,支付接口,移动支付,应用内支付,微信支付,银联接口,支付宝接口">
+    <link rel="stylesheet" type="text/css" href="../manage/css/conn.css"/>
+    <link rel="stylesheet" type="text/css" href="../manage/css/shopguan.css" />
+    <link rel="stylesheet" type="text/css" href="../manage/css/fee.css"/>
+
+<style>
+select {
+    height: 22px;
+    line-height: 18px;
+}
+.my-input {
+    font-family: "Microsoft Yahei";
+    height: 30px;
+	line-height: 30px;
+    margin-right: 10px;
+    padding-left: 5px;
+}
+.font25 {
+    color: #f60;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 25px;
+}
+.product-table-jilu-data {
+    font-size: 14px;
+    min-width: 780px;
+    padding-left: 20px;
+}
+
+#mainbox {
+    margin: 15px auto auto;
+    width: 1100px;
+}
+.rightbox {
+    background: none repeat scroll 0 0 #fff;
+    float: right;
+    margin-bottom: 30px;
+    padding: 30px;
+    width: 800px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+html,body{
+	background-color:#f1f1f1;	
+	font-size: 14px;
+}
+a {
+    color: #666;
+}
+</style>
+</head>
+  <body style="overflow-y:scroll;">
+	
+<div id="p-body">
+            <div class="defaultPage clearfix">
+                <div class="mainWrap">
+                    <!--#include virtual="/manage/html/menu.html"-->
+                    
+						<div id="p_module_cont" class="mainCon">
+						    <div class="funcArea">
+						        <div class="mc_title">
+						        	<img class="user user1" src="/manage/images/user.png"/><span class="user user2">用户名</span>
+						        	<img class="user" src="/manage/images/out.png"/>
+						            <h2 class="pull-left">分润统计</h2>
+						            <div class="pull-right" style="margin: 23px 32px;">
+						                <span class="menuBtn DHCbtn WL out" style="font-size:18px;cursor: pointer;">退出</span>
+						            </div>
+						        </div>
+                            </div>
+      <div id="paymentList" class="orderList">
+       <table width="100%" border="0" cellspacing="0" cellpadding="0">
+         <tr>
+           <td width="20%" height="50" >绑定手机</td>
+           <td width="25%" height="40" id="mobile_status" >未绑定</td>
+            <td width="20%" height="40" id="img01"><img src="" width="25" height="25" /></td>
+           <td width="35%" height="40"  >
+           <div id="modify_mobile" style="display:inline-block; cursor:pointer; color:#006CB4">未绑定</div>
+           <div id="popDiv0" class="mydiv" style="display: none;">
+           <div class="SContent-box">
+           <div class="my-title">绑定手机 <div style=" float:right"><a href="#" id="close_bind"  style="display:block; cursor:pointer">[关闭]</a></div> </div>
+           <div class="my-txt">
+           <form id="phoneform">
+           <table width="100%" border="0" cellspacing="0" cellpadding="5">
+  <tr>
+    <td height="40" align="right">手机号</td>
+    <td><input type="text" class="my-input" size="18" id="new_mobile" name="new_mobile" autocomplete="off"/>
+<!--
+</td>
+<td width="19" height="19" /> 
+-->
+<span class="err_info" id="err_new_mobile"></span>
+    </td>
+  </tr>
+  <tr>
+    <td height="40" align="right">短信验证码</td>
+    <td><input type="text" class="my-input" size="18" id="new_vericode" name="new_vericode" autocomplete="off"/>
+    <input name="button" type="button" class="my_btn" value="发送验证码" id="send_new_mobile_vericode" /></td>
+  </tr>
+<!--  <tr id="hide-mobile">
+    <td height="40" align="right">新手机号</td>
+    <td><input type="text" class="my-input" size="35" id="new_mobile" name="new_mobile"/></td>
+  </tr>
+-->
+  <tr>
+    <td height="40" align="right"></td>
+    <td><input type="button" class="my_btn" value="确  定" id="submit_bind"/>&nbsp;&nbsp;<input type="reset" class="my_huibtn" value="取 消" id="cancel_bind"/></td>
+  </tr>
+</table>
+</form>
+</div>
+           <div class="my-tishi" style="display:none" id="info1">输入有误，请重新输入</div>
+           </div>
+           </div>
+        
+        <!--  sec  -->
+        <!--<div id="bind_mobile" style="display:block; cursor:pointer; color:#006CB4">绑定</div>-->
+           <div id="popDiv1" class="mydiv" style="display: none;">
+                       <div class="SContent-box">
+                                   <div class="my-title">解绑手机 <div style=" float:right"><a href="#" id="close_unbind" style="display:block; cursor:pointer">[关闭]</a>
+                                   </div> 
+                           </div>
+                       <div class="my-txt">
+                       <form id="unphoneform">
+                                           <table width="100%" border="0" cellspacing="0" cellpadding="5">
+                                                      <tr>
+                                                                    <td height="40" align="right">手机号</td>
+                                            <td><input type="text" class="my-input" size="18" id="old_mobile" name="old_mobile"/><span class="err_info" id="err_old_mobile"></span></td>
+                                                          </tr>
+                                                  <tr>
+                                        <td height="40" align="right">短信验证码</td>
+                                                <td><input type="text" class="my-input" size="18" id="old_vericode" name="old_vericode"/><input name="button" type="button" class="my_btn" value="发送验证码" id="send_old_mobile_vericode" /></td>
+                                                  </tr>
+                                                          <tr>
+                                                        <td height="40" align="right"></td>
+                                                                                <td><input type="button" class="my_btn" value="下一步" id="submit_unbind" />&nbsp;&nbsp;<input type="button" class="my_huibtn" value="取 消" id="cancel_unbind"/></td>
+                                                              </tr>
+                                                                            </table>
+                                                                            </form>
+                                </div>
+                                <div class="my-tishi" style="display:none">输入有误，请重新输入</div>
+           </div>
+           </div>
+
+            <!--  END  -->
+            
+            
+           <div id="bg1" class="bg" style="display: none;"></div>
+        </td>
+          
+          </tr>
+         <tr>
+           <td height="50" >登陆密码</td>
+           <td height="40" id="pwd_status">已设置</td>
+            <td height="40" id="img02"><img src="images/on.gif" width="25" height="25" /></td>
+           <td height="40" >
+           <div id="modify_pwd" style="display:inline-block; cursor:pointer; color:#006CB4">修改</div>
+           
+           <div id="popDiv2" class="mydiv" style="display: none;">
+           <div class="SContent-box">
+           <div class="my-title">修改密码<div style=" float:right"><a href="#" id="close_pwd" style="display:block; cursor:pointer">[关闭]</a></div> </div>
+           <div class="my-txt">
+           <form id="login_pwd">
+           <table width="100%" border="0" cellspacing="0" cellpadding="5">
+<tr>
+    <td height="40" align="right">旧密码</td>
+    <td><input class="my-input" size="35" id="old_pwd" type="password" autocomplete="off" /></td>
+  </tr>
+  <tr>
+    <td height="40" align="right">新密码</td>
+    <td><input  class="my-input" size="35" id="new_pwd" type="password" autocomplete="off"/></td>
+  </tr>
+  <tr>
+    <td height="40" align="right">重复密码</td>
+    <td><input class="my-input" size="35" id="repeat_pwd" type="password" autocomplete="off"/></td>
+  </tr>
+  <tr>
+    <td height="40" align="right"></td>
+    <td><input type="button" class="my_btn" value="确  定" id="submit_pwd"/>&nbsp;&nbsp;<input type="button" class="my_huibtn" value="取 消" id="cancel_pwd"/>
+     &nbsp;&nbsp;<span class="font14"><a href="/login_forget.shtml" class="nav3">忘记密码？</a></span>
+    </td>
+  </tr>
+</table>
+</form>
+</div>
+           <div class="my-tishi" style="display: none;">输入有误，请重新输入</div>
+           </div>
+           </div>
+           <div id="bg2" class="bg" style="display: none;"></div>
+           </td>
+          
+         </tr>
+         <tr>
+           <td height="50" >交易密码</td>
+           <td height="40" id="transpwd_status">未设置</td>
+           <td height="40" id="img03"><img src="" width="25" height="25"/></td>
+           <td height="40" >
+           <div id="modify_tran_pwd" style="display:inline-block; cursor:pointer; color:#006CB4">设置</div>
+           
+           <div id="popDiv3" class="mydiv" style="display: none;">
+           <div class="SContent-box">
+           <div class="my-title">设置交易密码<div style=" float:right"><a href="#" id="close_tran_pwd"  style="display:block; cursor:pointer">[关闭]</a></div> </div>
+           <div class="my-txt">
+           <form id="settranform">
+               <table width="100%" border="0" cellspacing="0" cellpadding="5">
+               
+
+                    <tr>
+                        <td height="40" align="right">交易密码</td>
+                        <td><input type="password" class="my-input tran_check" size="35" onkeyup="checkd(this);"
+                                   onafterpaste="checkd(this);" id="pwd_tran" autocomplete="off" maxlength="6"/></td>
+                        <td width="100" height="19"> <span class="err_info" id="err_pwd_tran"></span> </td>
+                    </tr>
+                    <tr>
+                        <td height="40" align="right">重复密码</td>
+                        <td><input type="password" class="my-input tran_check" size="35" onkeyup="checkd(this);"
+                                   onafterpaste="checkd(this);" id="pwd_tran_repeat" autocomplete="off" maxlength="6"/></td>
+                        <td width="100" height="19"> <span class="err_info" id="err_pwd_tran_repeat"></span> </td>
+                    </tr>
+                    <!--
+                    <tr>
+                         <td align="right">手机验证码</td>
+                         <td><input type="text" class="mobileyzmform" id="vericode" maxlength="6" autocomplete="off" />
+                         <input name="send_tranpwd_vericode" type="button" class="register_btn" id="send_tranpwd_vericode" value="免费获取验证码" />
+</td >
+                         <td width="100" height="19"><span class="err_info" id="err_vericode"></span></td>
+                    </tr>-->
+                    <tr>
+                        <td height="40" align="right"></td>
+                        <td  colspan="2"><input type="button" class="my_btn" value="确  定" id="submit_tran_pwd"/>&nbsp;&nbsp;<input type="button" class="my_huibtn" value="取 消" id="cancel_tran_pwd"/></td>
+                    </tr>
+                </table>
+                </form>
+        </div>
+           <div class="my-tishi" style="display:none">输入有误，请重新输入</div>
+           </div>
+
+           </div>
+           <div id="popDiv3_modify" class="mydiv" style="display: none;">
+									<div class="SContent-box">
+										<div class="my-title">修改交易密码
+											<div style=" float:right"><a href="#" id="close_tran_pwd_mod" style="display:block; cursor:pointer">[关闭]</a>
+											</div>
+										</div>
+										<div class="my-txt">
+                                        <form id="modtranform">
+											<table width="100%" border="0" cellspacing="0" cellpadding="5">
+												<tr>
+													<td height="40" align="right">旧交易密码</td>
+													<td>
+														<input maxlength="6" type="password" class="my-input tran_check" size="35" id="pwd_tran_old" autocomplete="off"  onkeyup="checkd(this);"
+                                                               onafterpaste="checkd(this);"/>
+													</td>
+													<td width="100" height="19"> <span class="err_info" id="err_pwd_tran_old"></span> </td>
+												</tr>
+
+												<tr>
+													<td height="40" align="right">交易密码</td>
+													<td>
+														<input maxlength="6" type="password" class="my-input tran_check" size="35" onkeyup="checkd(this);"
+                                                               onafterpaste="checkd(this);" id="pwd_tran_mod" autocomplete="off" />
+													</td>
+													<td width="100" height="19"> <span class="err_info" id="err_pwd_tran_mod"></span> </td>
+												</tr>
+												<tr>
+													<td height="40" align="right">重复密码</td>
+													<td>
+														<input maxlength="6" type="password" class="my-input tran_check" size="35" onkeyup="checkd(this);"
+                                                               onafterpaste="checkd(this);" id="pwd_tran_repeat_mod" autocomplete="off" />
+													</td>
+													<td width="100" height="19"> <span class="err_info" id="err_pwd_tran_repeat_mod"></span> </td>
+												</tr>
+												<tr>
+													<td height="40" align="right"></td>
+													<td colspan="2">
+														<input type="button" class="my_btn" value="确  定" id="submit_tran_pwd_mod" />&nbsp;&nbsp;
+														<input type="button" class="my_huibtn" value="取 消" id="cancel_tran_pwd_mod" />
+                                                        &nbsp;&nbsp;
+                                                        <span class="font14"><a href="/tranpwd_forget.shtml" class="nav3">忘记密码？</a></span>
+													</td>
+												</tr>
+											</table>
+                                            </form>
+										</div>
+										<div class="my-tishi" style="display:none">输入有误，请重新输入</div>
+									</div>
+
+								</div>
+
+           <div id="bg3" class="bg" style="display: none;"></div>
+           </td>
+           
+         </tr>
+         <tr>
+          <td height="50" >设置密保</td>
+           <td height="40" id="answer_status">未设置</td>
+           <td height="40" id="img04"><img src="" width="25" height="25" /></td>
+           <td height="40" >
+           <div id="set_answer" style="display:inline-block; cursor:pointer; color:#006CB4">设置</div>
+           <div id="popDiv4" class="mydiv" style="display: none;">
+           <div class="SContent-box">
+
+        <div class="my-title" id="pwdquestion">设置密保问题<div style=" float:right"><a href="#" id="close_answer"  style="display:block; cursor:pointer">[关闭]</a></div> </div>
+           <div class="my-txt">
+           <form id="setQuestion" target="getUploadXMLsetquest" method="post">
+           <table width="100%" border="0" cellspacing="0" cellpadding="5">
+  <tr>
+    <td height="40" align="right">密保问题</td>
+    <td>
+        <select style="width:250px" id="question" name="question" >
+		    <option selected="selected" value="">请选择密保问题</option>
+            <option value="1" >您母亲的姓名是？</option>
+            <option value="2">您父亲的姓名是？</option>
+            <option value="3">您配偶的姓名是？</option>
+            <option value="4">您的出生地是？</option>
+            <option value="5">您高中班主任的名字是？</option>
+            <option value="6">您初中班主任的名字是？</option>
+            <option value="7">您小学班主任的名字是？</option>
+            <option value="8">您的小学校名是？</option>
+            <option value="9">您的学号（或工号）是？</option>
+        </select>
+        <input type="hidden" class="my-input" size="35" id="op_type_qu" name="op_type"/>
+        <input type="hidden" class="my-input" size="35" id="name_qu" name="name"/>
+    </td>
+  </tr>
+  <tr>
+    <td height="40" align="right">密保问题答案</td>
+    <td><input type="text" class="my-input" size="35" id="answer" name="answer"/>
+    <input type="hidden" class="my-input" size="35" id="old_answer_sub" name="answer_org"/></td>
+     <td width="19" height="19" > <span class="err_info" id="err_answer"></span> </td>
+  </tr>
+  <tr>
+    <td height="40" align="right"></td>
+            
+    <td><input type="button" class="my_btn" value="确  定" id="submit_answer"/>&nbsp;&nbsp;<input type="button" class="my_huibtn" value="取 消" id="cancel_answer"/></td>
+  </tr>
+</table>
+</form>
+</div>
+           <div class="my-tishi" style="display:none">输入有误，请重新输入</div>
+           </div>
+
+           </div>
+
+         <!-- sec 修改密保 begin -->
+           <div id="popDiv4_2" class="mydiv" style="display: none;">
+           <div class="SContent-box">
+
+        <div class="my-title">修改密保问题<div style=" float:right"><a href="#" id="close_old_answer"  style="display:block; cursor:pointer">[关闭]</a></div> </div>
+           <div class="my-txt">
+           <table width="100%" border="0" cellspacing="0" cellpadding="5">
+  <tr>
+    <td height="40" align="right">原密保问题</td>
+    <td>
+        <select style="width:250px" id="reset_question" name="select">
+		    <option selected="selected" value="">请选择密保问题</option>
+            <option value="1" >您母亲的姓名是？</option>
+            <option value="2">您父亲的姓名是？</option>
+            <option value="3">您配偶的姓名是？</option>
+            <option value="4">您的出生地是？</option>
+            <option value="5">您高中班主任的名字是？</option>
+            <option value="6">您初中班主任的名字是？</option>
+            <option value="7">您小学班主任的名字是？</option>
+            <option value="8">您的小学校名是？</option>
+            <option value="9">您的学号（或工号）是？</option>
+        </select>
+    </td>
+  </tr>
+  <tr>
+    <td height="40" align="right">密保问题答案</td>
+    <td><input type="text" class="my-input" size="35" id="old_answer" name="old_answer"/></td>
+    
+  </tr>
+  <tr><td></td><td> <span class="err_info" id="err_old_answer" style="color:red"></span></td></tr>
+  <tr>
+    <td height="40" align="right"></td>
+            
+    <td><input type="button" class="my_btn" value="下一步" id="submit_old_answer"/>&nbsp;&nbsp;<input type="button" class="my_huibtn" value="取 消" id="cancel_old_answer"/></td>
+  </tr>
+</table>
+</div>
+           <div class="my-tishi" style="display:none">输入有误，请重新输入</div>
+           </div>
+           </div>
+		<!-- sec 修改密保 end -->
+	
+           <div id="bg4" class="bg" style="display: none;"></div>
+           </td>
+           
+         </tr>
+
+         <tr>
+           <td height="50" >实名认证</td>
+           <td height="40" id="truename_status">未认证</td>
+            <td height="40" id="img05"><img src="" width="25" height="25" /></td>
+           <td height="40" ><div id="true_name" style="display:inline-block; cursor:pointer; color:#006CB4">认证</div>
+           <div id="popDiv5" class="mydiv" style="display: none;">
+           <div class="SContent-box">
+           <div class="my-title">实名认证<div style=" float:right"><a href="#" id="close_real"  style="display:block; cursor:pointer">[关闭]</a></div> </div>
+           <div style="color:red; text-align:center;" class="my-tishi">实名信息跟提现银行卡关联，请如实填写</div>
+           <div class="my-txt-shenfen">
+           <form action="/cgi-bin/create_auth_real_name.cgi" method="post" target="getUploadXML" enctype="multipart/form-data" id="formRealName">
+           <input name="id_type" value="1" type="hidden"/>
+           <input name="name" id="username" value="1" type="hidden"/> 
+           <table width="100%" border="0" cellspacing="0" cellpadding="5">
+  <tr>
+    <td height="40" align="right">真实姓名</td>
+    <td><input type="text" class="my-input" size="35" id="real_name" name="real_name"/></td>
+     <td width="19" height="19" > <span class="err_info" id="err_real_name"></span> </td>
+  </tr>
+  <tr >
+    <td height="40" align="right">身份证号码</td>
+    <td><input type="text" class="my-input" size="35" id="id_no" name="id_no"/>
+        <input type="hidden" class="my-input" size="35" id="vm" name="vm"/></td>
+    <td width="19" height="19" > <span class="err_info" id="err_id_no"></span> </td>
+  </tr>
+  <tr style="display:none;">
+    <td height="40" align="right">身份证正面</td>
+    <td><img src="images/p1.gif" width="60" height="60" id="id_addr_aimg" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale);"/><input type="file" class="my_shenfenbtn" value="上传图片" name="id_addr_a_" id="cre_id_pic_a" onchange="loadImageFile(event);"/><input type="hidden" name="id_addr_a" id="id_addr_a"/>&nbsp;非必填
+    <img id='img1' dynsrc='' style="visibility:hidden"/>   
+</td>
+  </tr>
+  <tr style="display:none;">
+    <td height="40" align="right">身份证背面</td>
+    <td><img src="images/p1.gif" width="60" height="60" id="id_addr_bimg" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale);"/><input type="file" class="my_shenfenbtn" value="上传图片" name="id_addr_b_" id="cre_id_pic_b" onchange="loadImageFile(event);"/><input type="hidden" name="id_addr_b" id="id_addr_b"/>&nbsp;非必填</td>
+  </tr>
+  <tr style="display:none;">
+  <td colspan="3">  <div class="my-tishi" style="display:block"> 证件必须是清晰彩色原件电子版，可以是扫描件或者数码拍摄照片，仅支持.jpg&nbsp;.jpeg&nbsp;.bmp的图片格式，图片大小不超过2M.
+</div></td></tr>
+  <tr>
+    <td height="40" align="right"></td>
+    <td><input type="button" class="my_btn" autocomplete="off" value="提 交" id="submit_real"/>&nbsp;&nbsp;<input type="button" class="my_huibtn" value="取 消" id="cancel_real"/></td>
+  </tr>
+</table>
+</form>
+</div>
+
+           </div>
+           </div>
+           <div id="bg5" class="bg" style="display: none;"></div></td>
+          
+         </tr>
+         <tr>
+           <td height="50" >绑定银行卡</td>
+           <td height="40" id="card_status">未绑定</td>
+            <td height="40" id="img06"><img src="" style="width:25; height:25;" /></td>
+           <td height="40">
+           <div id="bind_card" style="display:inline-block; cursor:pointer; color:#006CB4">绑定</div>
+           <div id="popDiv6" class="mydiv" style="display:none;">
+           <div class="SContent-box">
+           <div class="my-title">绑定银行卡<div style=" float:right"><a href="#" id="close_card"  style="display:block; cursor:pointer">[关闭]</a></div> </div>
+           <div class="my-txt-shenfen">
+           <form action="/cgi-bin/bind_bank_card.cgi" method="post"   id="bindCardform" target="getUploadXMLsetcard">
+           <table width="100%" border="0" cellspacing="0" cellpadding="5">
+  <tr>
+    <td width="18%" height="40" align="right">用户名</td>
+    <td><input type="text" class="my-input" size="35" id="cname" name="name" readonly/>
+    </td>
+  </tr>
+  <tr>
+    <td align="right">持卡人姓名</td>
+    <td><input type="text" class="my-input" size="35" id="card_name"  name="card_name" readonly/></td>
+  </tr>
+  <tr>
+    <td align="right">开户银行</td>
+    <td><select name="bank_no" class="my-input" id="bank_no" name="bank_no">
+    </select></td>
+  </tr>
+  <tr>
+    <td height="40" align="right" >开户地区</td>
+    <td><select name="provice_no" class="my-input" id="provice_no" name="provice_no">
+    </select><select name="city_no" class="my-input" id="city_no" name="city_no">
+    </select></td>
+  </tr>
+  <tr>
+    <td height="40" align="right">开户网点</td>
+    <td><input type="text" class="my-input" size="25" id="bank_branch_name" name="bank_branch_name"/></td>
+  </tr>
+  <tr>
+    <td height="40" align="right">账户类型</td>
+    <td><select name="card_type" class="my-input" id="card_type" name="card_type">
+    </select></td>
+  </tr>
+  <tr>
+    <td height="40" align="right">银行卡号</td>
+    <td><input type="text" class="my-input" size="30" id="card_no" name="card_no" onafterpaste="this.value=this.value.replace(/[^\d]/g,'')" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" /></td>
+  </tr>
+  <tr>
+    <td height="40" align="right"></td>
+    <td><input type="button" class="my_btn" value="提 交" id="submit_card"/>&nbsp;&nbsp;<input type="button" class="my_huibtn" value="取 消" id="cancel_card"/></td>
+  </tr>
+</table>
+</form>
+</div>
+
+           <div class="my-tishi" style="display:none">*请填写申请人姓名为枫叶的银行卡号。</div>
+           </div>
+           </div>
+           <!--
+                                	
+                                -->
+                                <div id="popDiv6_que" class="mydiv" style="display:none;">
+									<div class="SContent-box">
+										<div class="my-title">确认银行卡信息
+											
+										</div>
+										<div class="my-txt-shenfen">
+											<table width="100%" border="0" cellspacing="0" cellpadding="5">
+												
+												<tr>
+													<td align="right">开户银行：</td>
+													<td id='bank_noq'>
+														
+													</td>
+												</tr>
+												<tr>
+													<td height="40" align="right">开户地区：</td>
+													<td id='area'>
+														
+													</td>
+												</tr>
+												<tr>
+													<td height="40" align="right">开户网点：</td>
+													<td id='bank_branch_nameq'>
+														
+													</td>
+												</tr>
+												<tr>
+													<td height="40" align="right">账户类型：</td>
+													<td id='card_typeq'>
+														
+													</td>
+												</tr>
+												<tr>
+													<td height="40" align="right">银行卡号：</td>
+													<td id='card_noq'>
+														
+													</td>
+												</tr>
+												<tr>
+													<td height="40" align="right"></td>
+													<td>
+														<input type="button" class="my_btn" value="确认提交" id="submit_cardq" />&nbsp;&nbsp;
+														<input type="button" class="my_huibtn" value="返回修改" id="cancel_cardq" />
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="my-tishi" style="display:none">*请填写申请人姓名为枫叶的银行卡号。</div>
+									</div>
+								</div>
+								<!--
+                                	
+                                -->
+                                <div id="popDiv6_quxiao" class="mydiv" style="display:none;">
+									<div class="SContent-box">
+										<div class="my-title">解除银行卡确认
+											
+										</div>
+										<div class="my-txt-shenfen">
+											<table width="100%" border="0" cellspacing="0" cellpadding="5">
+												
+												<tr>
+													<td align="center" colspan="2" id="cardno_info"></td>
+													
+												</tr>
+												
+												<tr>
+													<td height="40" align="right"></td>
+													<td>
+														<input type="button" class="my_btn" value="下一步" id="tojiechu" />&nbsp;&nbsp;
+														<input type="button" class="my_huibtn" value="取消" id="cancel_jiechu" />
+													</td>
+												</tr>
+											</table>
+										</div>
+										
+									</div>
+								</div>
+                                <!---->
+                                 <div id="popDiv6_jiechu" class="mydiv" style="display:none;">
+									<div class="SContent-box">
+										<div class="my-title">解除银行卡绑定
+											
+										</div>
+										<div class="my-txt-shenfen">
+                                        <form id="unbindcardform">
+											<table width="100%" border="0" cellspacing="0" cellpadding="5">
+												
+												<tr>
+													<td align="right" colspan="" >请输入交易密码</td>
+													<td  colspan="2" ><input type="password" class="my-input" size="35" id="cardPwd_tran" maxlength="6" autocomplete="off"/></td>
+												</tr>
+												<tr>
+													<td align="right" colspan="" >手机号码</td>
+													<td  colspan="2" id="cardphone"></td>
+												</tr>
+												<tr>
+													<td align="right" colspan="" >短信验证码</td>
+													<td  colspan="" >
+														<input type="text" class="mobileyzmform" id="cardVericode" maxlength="6" autocomplete="off" /><input name="" type="button" class="register_btn" id="card_vericode" value="获取验证码" />
+													</td>
+													<td align="center" colspan="" >
+														
+														<span class="err_info" id="err_card_vericode"></span>
+													</td>
+												</tr>
+												
+												<tr>
+													<td height="40" align="right"></td>
+													<td>
+														<input type="button" class="my_btn" value="解除" id="jiechuCard" />&nbsp;&nbsp;
+														<input type="button" class="my_huibtn" value="取消" id="close_jiechu" />
+													</td>
+												</tr>
+											</table>
+                                            </form>
+										</div>
+										
+									</div>
+								</div>
+								<!---->
+           <div id="bg6" class="bg" style="display: none;"></div>
+           </td>
+          
+         </tr>
+         <tr>
+           <td height="50" id='email_name'>绑定邮箱</td>
+           <td height="40" id="email_status">未绑定</td>
+           <td height="40" id="img07"><img src="" width="25" height="25" /></td>
+           <td height="40" >
+            <div id="bind_email" style="display:inline-block; cursor:pointer; color:#006CB4">绑定</div>
+           <div id="popDiv7" class="mydiv" style="display: none;">
+           <div class="SContent-box">
+           <div class="my-title"><span id="email_name_mod">绑定邮箱</span><div style=" float:right"><a href="#" id="close_email"  style="display:block; cursor:pointer">[关闭]</a></div> </div>
+           <div class="my-txt">
+           <form id="emailform">
+           <table width="100%" border="0" cellspacing="0" cellpadding="5">
+  <tr>
+    <td height="40" align="right">新邮箱地址</td>
+    <td><input type="text" class="my-input" size="35" id="email"/></td>
+  </tr>
+  <tr>
+    <td height="40" align="right"></td>
+    <td><input type="button" class="my_btn" value="确  定" id="submit_email"/>&nbsp;&nbsp;<input type="button" class="my_huibtn" value="取 消" id="cancel_email"/></td>
+  </tr>
+</table>
+</form>
+</div>
+           <div class="my-tishi" style="display:none" id="info7">输入有误，请重新输入</div>
+           </div>
+           </div>
+           <div id="bg7" class="bg" style="display: none;"></div>
+           </td>
+           
+         </tr>
+       </table>
+       
+     </div>
+     </div>
+     
+    </div>
+ </div>
+ <div class="mainFooter">
+                    <span> </span>
+                    <div class="pull-right">
+                        <a href="#" class="copyright"></a>
+                    </div>
+                </div>
+  </div>
+ 
+
+<input type="hidden" id="key" name="key" value="<!--#include virtual="/key.txt" -->">
+<input type="hidden" id="keyvm" name="key" value="<!--#include virtual="/keyvm.txt" -->">
+
+<script type="text/javascript" src="../manage/js/global.js?v=Math.random()" ></script>
+	    <script type="text/javascript" src="../manage/js/mch.js?v=Math.random()" ></script>
+	    <script type="text/javascript" src="../manage/js/mch_global.js?v=Math.random()" ></script>
+	    <script type="text/javascript" src="../manage/js/wth.js?v=Math.random()" ></script>
+        <script type="text/javascript" src="../manage/js/WdatePicker.js?v=Math.random()"></script>
+        <script type="text/javascript" src="../js/3des.js" ></script>
+        <script type="text/javascript" src="../manage/js/jquery.js?v=Math.random()"></script>
+        <script type="text/javascript" src="../manage/js/jquery.page.js?v=Math.random()"></script>
+        <script type="text/javascript" src="../manage/js/jquery.cookie.js?v=Math.random()" ></script>
+        <script type="text/javascript" src="../manage/js/liushui.js?v=Math.random()"></script>
+        <script type="text/javascript" src="../manage/js/baseRequest.js?v=Math.random()"></script>
+        <script type="text/javascript" src="../manage/js/out.js?v=Math.random()"></script>
+     	<script type="text/javascript" src="../manage/js/user_type.js?v=Math.random()"></script>
+<script type="text/javascript">
+    Security.init();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+        <title>管理平台 | 国有支付 移动应用支付接口</title>
+        <meta name="description" content="国有支付 是全新的支付接入方式，开发者不再需要编写冗长的代码，简单几步就可以让你的应用获拥支付功能。让你的移动应用接入支付像大厦接入电力一样简单。">
+        <meta name="keywords" content="国有支付,支付接口,移动支付,应用内支付,微信支付,银联接口,支付宝接口">
+        <link rel="stylesheet" type="text/css" href="../css/conn.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/shopguan.css" />
+		<link rel="stylesheet" type="text/css" href="../css/account.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/getcash.css"/>
+		<link rel="shortcut icon" href="../favicon.ico"/>
+		 <!--#include virtual="/inc/css/global/global.html"-->
+		<!--#include virtual="/inc/js/mch.html"-->
+		<!--#include virtual="/inc/js/wth.html"-->
+		<!--#include virtual="/inc/js/time.html"-->
+		<!--#include virtual="/inc/js/box.html"-->
+		<!--#include virtual="/inc/js/global.html"-->
+		<!--#include virtual="/inc/js/mch_global.html"-->
+    </head>
+    <body style="overflow-y:scroll;">
+        <div id="p-body">
+            <div class="defaultPage clearfix">
+                <div class="mainWrap">
+                    <!--#include virtual="menu.html"-->
+                    <div id="p_module_cont" class="mainCon">
+                        <div class="funcArea">
+                            <div class="mc_title">
+                            	<img class="user user1" src="../images/user.png"/><span class="user user2">用户名</span>
+                            	<img class="user" src="../images/out.png"/>
+                                <h2 class="pull-left">提现</h2>
+                                <div class="pull-right" style="margin: 23px 32px;">
+                                    <span class="menuBtn DHCbtn WL out" style="font-size:18px;cursor: pointer;">退出</span>
+                                </div>
+                            </div>
+
+                            </div>
+                            
+                            <div class="product-jilu">
+    
+						     <div class="product-table-jilu tixian_lbb">
+						       <table width="100%" border="0" cellspacing="1" cellpadding="10">
+						         <tr>
+						           <td width="16%" align="right" bgcolor="#F6F6F6" >可提现金金额</td>
+						           <td width="87%" bgcolor="#F6F6F6" ><span class="font23" id="balance">0</span>元</td>
+						          </tr>
+						         <tr>
+						           <td align="right" bgcolor="#F6F6F6" >本次提现金额</td>
+						           <td bgcolor="#F6F6F6" ><input name="out_money" type="text" class="pay-input" id="out_money" maxlength="12" onkeyup="this.value=this.value.replace(/[^\d|^\.]/g,'')" 
+													onafterpaste="this.value=this.value.replace(/[^\d|^\.]/g,'')"/> 元
+									<span class="err_info" id="err_out_money"></span></td>
+						         </tr>
+						         <tr>
+						           <td align="right" bgcolor="#F6F6F6" >提现手续费</td>
+						           <td bgcolor="#F6F6F6" ><span class="font23" id="out_fee">0.00</span>元 </td>
+						         </tr>
+						         <tr>
+						           <td align="right" bgcolor="#F6F6F6" >实际到账金额</td>
+						           <td bgcolor="#F6F6F6" ><span class="font23" id="out_actual">0.00</span>元 
+									<span class="err_info" id="err_out_actual"></span></td>
+						         </tr>
+						         <tr>
+						           <td align="right" bgcolor="#F6F6F6">预计到账时间</td>
+						           <td bgcolor="#F6F6F6" ><span id="reach_date">1-2个工作日（双休日和法定假节日除外）</span></td>
+						         </tr>
+						         <tr>
+						           <td align="right" bgcolor="#F6F6F6">银行卡号</td>
+						           <td bgcolor="#F6F6F6" ><span id="card_no"><a href="http://www.transt.cn/auth/security.shtml" class="nav3" id="bind_card_no">绑定卡号</a>后可见</span></td>
+						         </tr>
+						         <tr>
+						           <td align="right" bgcolor="#F6F6F6" >您绑定的手机号</td>
+						           <td bgcolor="#F6F6F6"><span id="mobile"><a href="http://www.transt.cn/auth/security.shtml" class="nav3" id="bind_mobile">绑定手机号</a>后可见</span></td>
+						         </tr>
+						         <tr>
+						           <td align="right" bgcolor="#F6F6F6" >输入短信验证码</td>
+						           <td bgcolor="#F6F6F6" ><input type="text" class="my-input" size="18" id="vericode" name="vericode" maxlength="6"/>
+								   <input type="button" class="my_btn" value="发送验证码" id="send_mobile_vericode"/>
+									<span class="err_info" id="err_vericode"></span></td>
+						         </tr>
+						         <tr>
+						           <td align="right" bgcolor="#F6F6F6" >交易密码</td>
+						           <td bgcolor="#F6F6F6" ><input type="password" class="my-input" size="18" id="tran_pwd" name="tran_pwd" maxlength="6"/>
+									<span class="err_info" id="err_tran_pwd"></span>&nbsp;&nbsp;<a href='http://www.transt.cn/auth/security.shtml' style="color: #006cb4;">设置、找回交易密码</a></td>
+						         </tr>
+						       </table>
+						       <a href="javascript:;" class="pay-btn1" id="getcash">确 定</a>
+					          </div>
+					        </div>
+						    <div style="clear:both"></div>
+						    <div class="getcash-pro" style="display: none;">
+							  <p style="color:#39F;">提现手续费说明：</p>
+							  <p>用户充值后投资项目，投资总额50元或以上，提现免手续费；充值后不投资或投资总额少于50元，提现收取手续费5元/笔。</p>
+						    </div>                        
+                      
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="mainFooter">
+                    <span> </span>
+                    <div class="pull-right">
+                        <a href="#" class="copyright"></a>
+                    </div>
+                </div>
+            </div>
+        <input type="hidden" id="key" name="key" value="<!--#include virtual="/key.txt" -->">
+        <input type="hidden" id="keyvm" name="key" value="<!--#include virtual="/keyvm.txt" -->">
+        <script type="text/javascript">
+        	function getParamQueryString(param,name) {
+         var reg = new RegExp("(^|&?)" + name + "=([^&]*)");
+         var r = param.match(reg);
+         if (r != null)
+             return r[2];
+         return null;
+         }
+
+        </script>
+         <script type="text/javascript" src="/js/popup.js?v=20130709"></script>
+        <script type="text/javascript" src="../js/global.js?v=Math.random()" ></script>
+        <script type="text/javascript" src="../js/public_fun.js?v=Math.random()" ></script>
+		<script type="text/javascript" src="../js/mch.js?v=Math.random()" ></script>
+        <script type="text/javascript" src="../js/mch_global.js?v=Math.random()" ></script>
+        <script type="text/javascript" src="../js/wth.js?v=Math.random()" ></script>
+        <script type="text/javascript" src="../js/WdatePicker.js"></script>
+        <script type="text/javascript" src="../js/3des.js" ></script>
+         <script type="text/javascript" src="../js/base64.js?v=Math.random()"></script>
+        
+        <script type="text/javascript" src="../js/jquery.js?v=Math.random()"></script>
+        <script type="text/javascript" src="../js/echarts.all.js"></script>
+        <script type="text/javascript" src="../js/jquery.page.js?v=Math.random()"></script>
+        <script type="text/javascript" src="../js/jquery.cookie.js?v=Math.random()" ></script>
+       
+        <script type="text/javascript" src="../js/baseRequest.js?v=Math.random()"></script>
+        <script type="text/javascript" src="../js/out.js?v=Math.random()"></script>
+     	<script type="text/javascript" src="../js/user_type.js?v=Math.random()"></script>
+        <script type="text/javascript" src="../js/getcash.js"></script>
+        <script type="text/javascript">
+            GetCash.init();
+        </script>
+
+
+    </body>
+</html>

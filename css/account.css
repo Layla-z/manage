@@ -1,0 +1,61 @@
+.font25 {
+    color: #f60;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 25px;
+}
+.zonghuzl {
+    height: 430px;
+    min-width: 780px;
+    padding-left: 20px;
+}
+.zonghuzl ul{
+    margin-top:40px;
+}
+.zonghuzl li {
+    font-size: 16px;
+    height: 50px;
+    line-height: 35px;
+    width: 80%;
+}
+
+#mainbox {
+    margin: 15px auto auto;
+    width: 1100px;
+}
+.right-txt ul li {
+    border: 0px solid #dcdcdc;
+    margin-right: 10px;
+    margin-top: 40px;
+}
+.rightbox {
+    background: none repeat scroll 0 0 #fff;
+    float: right;
+    margin-bottom: 30px;
+    padding: 30px;
+    width: 800px;
+}
+a.pay-btn {
+    background: none repeat scroll 0 0 #ff794e;
+    border-radius: 3px;
+    box-shadow: 0 3px 0 #e35325;
+    color: #fff;
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    margin-right: 5px;
+    text-align: center;
+    width: 70px;
+}
+a.getcash-btn {
+    background: none repeat scroll 0 0 #9e9e9e;
+    border-radius: 3px;
+    box-shadow: 0 3px 0 #8e8e8e;
+    color: #fff;
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    margin-right: 5px;
+    text-align: center;
+    width: 70px;
+	
+}

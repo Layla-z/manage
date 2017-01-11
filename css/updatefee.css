@@ -1,0 +1,38 @@
+.feebody{
+	width: 500px;
+	height: 500px;
+	margin: 0 auto;
+}
+.feebody ul li{
+	width: 500px;
+	height: 90px;
+	line-height: 90px;
+	font-size: 16px;
+}
+.feebody ul li:first-child{
+	border-bottom: 1px solid #ccc;
+}
+.feebody ul li:last-child{
+	text-align: center;
+}
+.c{
+	margin-left: 84px;
+}
+.c1{
+	margin-left: 100px;
+}
+.c2{
+	border:1px solid #eeeeee;
+	width:276px;
+	height:38px;
+	padding-left: 10px;
+}
+.c3{
+	background:#3c8ce3;
+	border:1px solid #eeeeee;
+	border-radius:5px;
+	width:123px;
+	height:43px;
+	color: #fff;
+	cursor: pointer;
+}

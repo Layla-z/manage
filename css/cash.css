@@ -1,0 +1,38 @@
+* {margin : 0;top : 0;}
+body{background-color: #FFFFFF;}
+a:hover {text-decoration : none;}
+.container {border : 1px solid #EEEEEE;}
+.detail {height: 40px;font-size: 22px;font-weight:bold;padding-top:10px;padding-left: 10px;background-color:#EEEEEE;color: #666666;max-height:50px;display:block;}
+.button {width: 100px;display: inline-block;zoom: 1;*display: inline;padding: .5em;font: 14px/100% Arial, Helvetica, sans-serif;box-shadow: 0 1px 2px rgba(0,0,0,.2);-webkit-border-radius: .5em;-moz-border-radius: .5em;border-radius: .5em;outline: none;text-align: center;text-decoration: none;}
+.button:hover {text-decoration: none;}
+.button:active {position: relative;top: 1px;}
+.orange {background : #FF8800;color: white;text-shadow: 0 1px 1px rgba(0,0,0,.3);font-weight: bold;border: solid 1px #FF9900;}
+.orange:active {color: #FF9900;position: relative;text-decoration: none;top: 1px;}
+.orange:hover {color: #EEEEEE;text-decoration: none;border:solid 1px #FF8800;}
+.form {background-color: #EEEEEE;height:80px}
+.start_time,.end_time {color:#888888;}
+.record_other{font-size:15px;font-weight:normal;margin-right:6px;}
+.main-right{height: auto;}
+.my-title{width: 550px;}
+.Wdate {
+    width: 96px;
+    padding: 2px;
+    height: 32px !important;
+}
+.orderList table tbody tr td {
+    text-align: center;
+}
+.orderList table tbody tr td.thead {
+    text-align: left;
+}
+.query-condition table {
+    width: 80%;
+}		
+.tab-content th, .tab-content td {
+    text-align: center;
+}	
+.table th {
+   background-color: #F78A8A;
+   color: #FFFFFF;
+}
+		

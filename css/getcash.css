@@ -1,0 +1,140 @@
+.SContent-box {
+    background: #fff none repeat scroll 0 0;
+    padding-bottom: 30px;
+    width: 550px;
+}
+.mydiv {
+    left: 50%;
+    margin-left: -250px !important;
+    margin-top: -150px !important;
+    position: fixed !important;
+    top: 50%;
+    width: 550px;
+    z-index: 99;
+}
+.my-title {
+    background: #ccc none repeat scroll 0 0;
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    width: 530px;
+}
+.my-txt {
+    line-height: 20px;
+    margin: auto;
+    padding: 10px;
+    width: 500px;
+}
+
+.my_btn {
+    background: #f90 none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 3px;
+    color: #fff;
+    font-family: "Microsoft Yahei";
+    height: 35px;
+    line-height: 35px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.my_huibtn {
+    background: #ccc none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 3px;
+    color: #fff;
+    font-family: "Microsoft Yahei";
+    height: 35px;
+    line-height: 35px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.my-tishi {
+    font-size: 16px;
+    line-height: 20px;
+    margin: auto;
+    text-align: center;
+    width: 500px;
+}
+a {
+    
+    text-decoration: none;
+}
+.bg {
+    background-color: #666;
+    height: 100%;
+    left: 0;
+    opacity: 0.5;
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.product-table-jilu {
+    font-size: 14px;
+    line-height: 22px;
+    padding: 10px;
+}
+.rightbox {
+    background: none repeat scroll 0 0 #fff;
+    float: right;
+    margin-bottom: 30px;
+    padding: 30px;
+    width: 800px;
+}
+#mainbox {
+    margin: 15px auto auto;
+    width: 1100px;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.tixian_lbb td {
+    padding: 10px;
+}
+.font23 {
+    color: #f60;
+    font-size: 23px;
+}
+
+.pay-input {
+    font-family: "Microsoft Yahei",Arial,Helvetica,Tahoma;
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 5px;
+    width: 200px;
+}
+
+.my-input {
+    font-family: "Microsoft Yahei";
+    height: 30px;
+	line-height: 30px;
+    margin-right: 10px;
+    padding-left: 5px;
+}
+
+a.pay-btn1 {
+    background: #ff794e none repeat scroll 0 0;
+    border-radius: 3px;
+    box-shadow: 0 3px 0 #e35325;
+    color: #fff;
+    display: block;
+    float: left;
+    font-size: 18px;
+    height: 45px;
+    line-height: 45px;
+    margin-top: 10px;
+    text-align: center;
+    width: 280px;
+    margin-left: 170px;
+}
+
+a {
+    
+    text-decoration: none;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="GB2312">
+		<title>管理平台 | 国有支付 移动应用支付接口</title>
+        <meta name="description" content="国有支付 是全新的支付接入方式，开发者不再需要编写冗长的代码，简单几步就可以让你的应用获拥支付功能。让你的移动应用接入支付像大厦接入电力一样简单。">
+        <meta name="keywords" content="国有支付,支付接口,移动支付,应用内支付,微信支付,银联接口,支付宝接口">
+        <link rel="stylesheet" type="text/css" href="../css/shopguan.css" />
+		<link rel="stylesheet" type="text/css" href="../css/addshop.css"/>
+    </head>
+<body class="popopen">
+    <div class="fullHead in" style="display: block;">
+        <div class="fullHeadWrap">
+            <div class="backWrap" style="display:none">
+                <span class="icon icon-arrow-left-lg"></span>
+            </div>
+            <a href="../html/shopcheck.shtml"><div class="closeWrap" style="font-size:16px;">
+                返回商户
+            </div></a>
+            <div class="fullTitle">添加商户</div>
+        </div>
+    </div>
+    
+
+
+    <div id="p_frame" class="pop in" style="display: block;">
+        <div class="popwrap popFull">
+            <div class="fullWrap wrapper">        
+            <div class="orgType"><div id="#sflex03" class="stepflex">
+        <dl class="first done">
+            <dt class="s-num">1</dt>
+            <dd class="s-text">1.商户信息<s></s><b></b></dd>
+        </dl>
+        <dl class="normal done">
+            <dt class="s-num">2</dt>
+            <dd class="s-text">2.商户联系人<s></s><b></b></dd>
+        </dl>
+        <dl class="normal doing">
+            <dt class="s-num">3</dt>
+            <dd class="s-text">3.结算信息<s></s><b></b></dd>
+        </dl>
+    </div> 
+                 <div id="org_companyInfo" class="tree tree1">
+                    <div class="row treerow">
+                        <div class="title">
+                            <h3>结算信息</h3>
+                        </div>
+                        <div class="chapter">
+                            <div class="row">
+                                <div class="subtitle">
+                                    <h4>账户类型</h4>
+                                </div>
+                                <div class="section">
+                                    <select class="katype" id="card_type">
+                                   <option value="1">个人</option>
+                                   <option value="2">企业</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="subtitle">
+                                    <h4>开户银行</h4>
+                                </div>
+                                <div class="section">
+                                    <input id="bank_name" type="text" class="form-control" placeholder="必填开户银行">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="subtitle">
+                                    <h4>开户银行省市</h4>
+                                </div>
+                                <div id="distpicker4">						          
+						        <!--  <select style="width: 330px;" class="form-control provice_name" id="provice_name"></select>  
+						          <select style="width: 330px;margin: 10px 0 10px 220px;" class="form-control city_name" id="city_name"></select>	
+                                  -->
+                                  	<select style="width: 330px;"  class="form-control provice_name" id="province_addr"></select>
+                                    <select style="width: 330px;margin: 10px 0 10px 220px;" class="form-control city_name" id="city_addr"></select>
+                                    <input type="hidden" name="city" id="city" />				        
+						        </div>
+                            </div>
+                            <div class="row">
+                                <div class="subtitle">
+                                    <h4>银行卡号</h4>
+                                </div>
+                                <div class="section">
+                                    <input id="card_no" type="text" class="form-control" placeholder="必填银行卡号">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="subtitle">
+                                    <h4>开户姓名</h4>
+                                </div>
+                                <div class="section">
+                                    <input id="card_name" type="text" class="form-control" placeholder="必填开户姓名">
+                                </div>
+                            </div>
+                          
+                            <div class="row">
+                                <div class="subtitle">
+                                    <h4>开户手机号码</h4>
+                                </div>
+                                <div class="section ot_city_select">
+                                    <input id="mobile" type="text" class="form-control" placeholder="必填开户手机号码">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="subtitle">
+                                    <h4>身份证号码</h4>
+                                </div>
+                                <div class="section">
+                                    <input id="id_card" type="text" class="form-control" placeholder="必填身份证号码">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="text-center btn-group">
+                    <a href="../html/addshop2.html"><button class="btn btnDashboard">上一步</button></a>
+                    <span style="visibility:hidden;width:120px;height:16px;display:inline-block;" class="kong"></span>
+                    <button id="save" onClick="AddShop.addShopRequest();" class="btn btnDashboard">提交</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/jquery.js" type="text/javascript" charset="GBK"></script>
+    <script src="../../js/city.js" type="text/javascript"></script>
+    <script src="../js/distpicker.data.js" type="text/javascript"></script>
+    <script src="../js/distpicker.js" type="text/javascript"></script>
+    <script src="../js/GBK.js" type="text/javascript"></script>
+    
+	<script type="text/javascript" src="../js/global.js" ></script>
+    <script type="text/javascript" src="../js/mch.js" ></script>
+    <script type="text/javascript" src="../js/mch_global.js" ></script>
+    <script type="text/javascript" src="../js/wth.js" ></script>
+    <script src="../js/addshop3.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    	AddShop.init();
+    </script>
+    </body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+        <title>管理平台 | 国有支付 移动应用支付接口</title>
+        <meta name="description" content="国有支付 是全新的支付接入方式，开发者不再需要编写冗长的代码，简单几步就可以让你的应用获拥支付功能。让你的移动应用接入支付像大厦接入电力一样简单。">
+        <meta name="keywords" content="国有支付,支付接口,移动支付,应用内支付,微信支付,银联接口,支付宝接口">
+        <link rel="stylesheet" type="text/css" href="../css/conn.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/shopguan.css" />
+		<link rel="stylesheet" type="text/css" href="../css/liudetails.css"/>
+    </head>
+    <body>
+	    <div id="p-body">
+            <div class="defaultPage clearfix">
+                <div class="mainWrap">
+					<!--#include virtual="menu.html"-->
+					
+						<div id="p_module_cont" class="mainCon">
+						    <div class="funcArea">
+						        <div class="mc_title">
+						        	<img class="user user1" src="../images/user.png"/><span class="user user2">用户名</span>
+						        	<img class="user" src="../images/out.png"/>
+						            <h2 class="pull-left">交易详情</h2>
+						            <div class="pull-right" style="margin: 23px 32px;">
+						                <span class="menuBtn DHCbtn WL out" style="font-size:18px;cursor: pointer;">退出</span>
+						            </div>
+						        </div>
+                            </div>
+
+                            <div id="paymentList" class="orderList">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th class="date thtype show" style="padding-left:0;">
+                                                流水号
+                                            </th>
+                                            <th class="date thtype show">
+                                                商家名称
+                                            </th>
+                                            <th class="amount thtype show">
+                                                订单金额
+                                            </th>
+                                            <th class="detail thtype show">
+                                                支付结果
+                                            </th>
+                                            <th class="amount thtype show">
+                                                订单创建日期
+                                            </th>
+                                            <th class="operate thtype show">
+                                                实际扣款金额
+                                            </th>
+                                            <th class="amount thtype show">
+                                                扣款时间
+                                            </th>
+                                            <th class="operate thtype show">
+                                                通知时间
+                                            </th>
+                                            <th class="operate thtype show">
+                                               支付方式
+                                            </th>
+                                            <th class="operate thtype show">
+                                                费率
+                                            </th>
+                                             <th class="operate thtype show">
+                                                手续费
+                                            </th> 
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tBody">
+                                    </tbody>
+                                </table>
+                                    
+                                <input class="form-control" style="border:none;" type="button" id="goBack" value="返回" />
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="mainFooter">
+                    <span> </span>
+                    <div class="pull-right">
+                        <a href="#" class="copyright"></a>
+                    </div>
+                </div>
+            </div>
+        <script type="text/javascript" src="../js/global.js?v=Math.random()" ></script>
+		<script type="text/javascript" src="../js/mch.js?v=Math.random()" ></script>
+        <script type="text/javascript" src="../js/mch_global.js?v=Math.random()" ></script>
+        <script type="text/javascript" src="../js/wth.js?v=Math.random()" ></script>
+    
+        <script type="text/javascript" src="../js/jquery.js?v=Math.random()"></script>
+        <script type="text/javascript" src="../js/jquery.cookie.js?v=Math.random()" ></script>
+        <script type="text/javascript" src="../js/liudetails.js?v=Math.random()"></script>
+        <script type="text/javascript" src="../js/baseRequest.js?v=Math.random()"></script>
+        <script type="text/javascript" src="../js/out.js?v=Math.random()"></script>
+     	<script type="text/javascript" src="../js/user_type.js?v=Math.random()"></script>
+        <script type="text/javascript">
+            LiudetailsWork.init();
+        </script>
+    </body>
+</html>

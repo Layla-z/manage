@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+        <title>管理平台 | 国有支付 移动应用支付接口</title>
+        <meta name="description" content="国有支付 是全新的支付接入方式，开发者不再需要编写冗长的代码，简单几步就可以让你的应用获拥支付功能。让你的移动应用接入支付像大厦接入电力一样简单。">
+        <meta name="keywords" content="国有支付,支付接口,移动支付,应用内支付,微信支付,银联接口,支付宝接口">
+        <link rel="stylesheet" type="text/css" href="../css/conn.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/shopguan.css" />
+		<link rel="stylesheet" type="text/css" href="../css/gailan.css"/>
+		<link rel="shortcut icon" href="../favicon.ico"/>
+		<!--#include virtual="/inc/js/mch.html"-->
+		<!--#include virtual="/inc/js/wth.html"-->
+		<!--#include virtual="/inc/js/box.html"-->
+		<!--#include virtual="/inc/js/global.html"-->
+		<!--#include virtual="/inc/js/mch_global.html"-->
+		
+        <script type="text/javascript" src="../js/global.js?v=Math.random()" ></script>
+		<script type="text/javascript" src="../js/mch.js?v=Math.random()" ></script>
+        <script type="text/javascript" src="../js/mch_global.js?v=Math.random()" ></script>
+        <script type="text/javascript" src="../js/wth.js?v=Math.random()" ></script>
+        <script type="text/javascript" src="../js/WdatePicker.js"></script>
+        
+        <script type="text/javascript" src="../js/jquery.js?v=Math.random()"></script>
+        <script type="text/javascript" src="../js/echarts.all.js"></script>
+        <script type="text/javascript" src="../js/jquery.page.js?v=Math.random()"></script>
+        <script type="text/javascript" src="../js/jquery.cookie.js?v=Math.random()" ></script>
+        <script type="text/javascript" src="../js/ganlan.js?v=Math.random()"></script>
+        <script type="text/javascript" src="../js/baseRequest.js?v=Math.random()"></script>
+        <script type="text/javascript" src="../js/out.js?v=Math.random()"></script>
+     
+    
+	    <script type="text/javascript" src="../js/base64.js?v=20140320"></script>
+	    <script type="text/javascript" src="../js/account.js"></script>
+    </head>
+    <body style="overflow-y:scroll;">
+        <div id="p-body">
+            <div class="defaultPage clearfix">
+                <div class="mainWrap">
+                    <!--#include virtual="menu.html"-->
+                    <div id="p_module_cont" class="mainCon">
+                        <div class="funcArea">
+                            <div class="mc_title">
+                            	<img class="user user1" src="../images/user.png"/><span class="user user2">用户名</span>
+                            	<img class="user" src="../images/out.png"/>
+                                <h2 class="pull-left">交易概览</h2>
+                                <div class="pull-right" style="margin: 23px 32px;">
+                                    <span class="menuBtn DHCbtn WL out" style="font-size:18px;cursor: pointer;">退出</span>
+                                </div>
+                            </div>
+
+                            </div>
+                            
+                             <div class="right-txtt user_type20">
+						        <div class="zonghuzl">
+						        
+							        <ul>
+							           <li>账户总资产:
+							           <span class="font25" id="total_money"></span></li>
+							           <li>可用余额:
+							           <span class="font25" id="balance"></span>&nbsp;&nbsp;<a href="#" class="getcash-btn" id="getcash">提现</a>
+							           </li>
+							           <!--<li>待收总额:
+							           <span class="font25" id="total_due_money"></span></li>-->
+							           <!--<li>冻结金额:
+							           <span class="font25" id="total_frozen"></span></li>-->
+							           <!--<li>体验金:
+							           <span class="font25" id="tiyan_money">0.00元</span></li>-->
+							        </ul>
+						        
+						        </div>
+						    </div>
+                            <script type="text/javascript" src="../js/user_type.js" ></script>
+                            <div id="paymentList" class="orderList">
+                               <div id="app_profile_table">    
+                                    	<div class="ai_profile">
+								        <table style="border-bottom: 1px solid #EDF0F2;">
+								            <thead>
+								            <tr>
+								                <th class="text-center"></th>
+								                <th class="text-center">成功交易额</th>
+								                <th class="text-center">发起订单</th>
+								                <th class="text-center">成功订单</th>
+								                <th class="text-center">订单转化率</th>
+								                <th class="text-center"><!--平均客单价--></th>
+								            </tr>
+								            </thead>
+								            <tbody>
+								            <tr>
+								                <td class="text-black text-center">昨天概览</td>
+								                <td class="text-black text-center"><span class="suc_amount big"></span> 元</td>
+								                <td class="text-black text-center"><span class="total big"></span> 笔</td>
+								                <td class="text-black text-center"><span class="suc_num big"></span> 笔</td>
+								                <td class="text-black text-center"><span class="sucrate big"></span> %</td>
+								                <td class="text-black text-center"><span></span></td>
+								            </tr>
+								            </tbody>
+								        </table>
+								    </div>
+                               </div>
+                               
+                               <div id="main" style="height:400px;width:1000px;"></div>
+                               
+                               <div id="main2" style="height:400px;width:1000px;"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="mainFooter">
+                    <span> </span>
+                    <div class="pull-right">
+                        <a href="#" class="copyright"></a>
+                    </div>
+                </div>
+            </div>
+        
+        
+     	
+        <script type="text/javascript">
+            GanlanWork.init();
+            Account.init();
+        </script>
+
+    </body>
+</html>

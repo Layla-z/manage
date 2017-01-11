@@ -1,0 +1,46 @@
+a{
+	color:#F5A623;
+}
+.il_wrap .il_btn .btn{
+	display: inline-block;
+}
+.il_body h4{
+	color:#F5A623;
+	z-index:44;	
+}
+body{
+	height: 100%; 
+	background: url(../images/bodybg.jpg) no-repeat;
+	background-size: cover;
+    background-position: 50% 50%;
+}
+.logo1{
+	width: 64px;
+	position: fixed;
+	top: 20px;
+	left: 30px;
+}
+#userkong,#passkong{
+	color:red;
+	visibility:hidden;
+}
+#uin,#pwd{
+	background-image: url(../images/uin.png);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: 10px;
+    padding-left: 45px;
+	
+}
+#pwd{
+	background-image: url(../images/pwd.png);
+	background-size: 16px;
+}
+.i_login{
+	padding: 100px 0 96px;
+}
+@media only screen and (min-width: 1500px) and (max-width: 2000px) {
+	.i_login {
+	    padding: 200px 0 96px;
+	}
+}

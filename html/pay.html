@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="GB2312">
+    <title>管理平台 | 国有支付 移动应用支付接口</title>
+    <meta name="description" content="国有支付 是全新的支付接入方式，开发者不再需要编写冗长的代码，简单几步就可以让你的应用获拥支付功能。让你的移动应用接入支付像大厦接入电力一样简单。">
+    <meta name="keywords" content="国有支付,支付接口,移动支付,应用内支付,微信支付,银联接口,支付宝接口">
+    <meta name="save" content="history">
+    <link rel="stylesheet" type="text/css" href="../css/sweetalert.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" id="viewport" />
+	<link rel="stylesheet" type="text/css" href="../css/pay.css"/>
+</head>
+
+<body>
+    <input type="hidden" value="" name="account" id="account">
+    <div class="shop">
+        <span class="shopming">商户名称</span>
+        <span class="shopname" id="shopName"></span>
+    </div>
+    
+    <div id="show1">
+        <div class="money">
+            <span class="moneyname">输入金额</span>
+            <p style="width: 150px;height: 30px;text-align: center;margin: 18px auto;">
+                <span class="moneybi">￥</span>
+                <input class="moneyru" type="number" name="money" id="money" placeholder="0.00" />
+            </p>
+        </div>
+        <input class="fukuan" type="button" id="payButton" value="确认付款" />
+    </div>
+    <div id="show2" style="display: none;">
+        <div class="shop">
+            <span class="shopming">商品金额</span>
+            <span class="shopname">￥&nbsp;<span id="amcount">0</span></span>
+        </div>
+        <div id="pay_code_div" class="tcenter pr" style="height: 300px;">
+            <div class="tc" id="tgCode"
+                style="padding-top: 80px; width: 200px; height: 200px; margin: 15px auto;"></div>
+            <p style="text-align:center">扫描或长按识别二维码<span style="color:#F5A623">去付款</span></p>
+        </div>
+    </div>
+
+
+	<script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/twoCode.js"></script>
+    <script type="text/javascript" src="../js/md5.js"></script>
+    <script type="text/javascript" src="../js/sweetAlert/sweetalert.min.js"></script>
+    <script type="text/javascript" src="../js/pay.js"></script>
+    <script type="text/javascript" src="../js/baseRequest.js"></script>
+    <script type="text/javascript" src="../js/GBK.js"></script>
+    <script type="text/javascript" src="../js/global.js" ></script>
+    <script type="text/javascript" src="../js/mch.js" ></script>
+    <script type="text/javascript" src="../js/mch_global.js" ></script>
+    <script type="text/javascript" src="../js/wth.js" ></script>
+    <script>
+        Pay.init();
+    </script>
+</body>
+</html>

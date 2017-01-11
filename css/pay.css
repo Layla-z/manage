@@ -1,0 +1,94 @@
+ html {
+     -webkit-text-size-adjust: 100%;   /*让谷歌浏览器可以设定字体大小*/
+    -ms-text-size-adjust: 100%;
+}
+body,div,ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,p{margin:0;padding:0;}
+
+/* 设置HTML5元素为块 */
+  article， aside， details， figcaption， figure， footer， header， hgroup， menu， nav， section {
+	display： block;
+}
+ /* 设置图片视频等自适应调整 */
+ img {
+	max-width： 100%;
+	height： auto;
+	width： auto\9; /* ie8 */
+	}
+
+body{
+    background:#f9f9f9;
+    font-family:.PingFangSC-Regular;
+}
+.head,.shop,.money{
+    background:#fff;
+    width:100%;
+    border-bottom: 1px solid #D5D5D5;
+}
+.head{
+    height:32px;
+    line-height: 32px;
+    font-size:17px;
+    color:#030303;
+    letter-spacing:-0.41px;
+    text-align:center;
+    border-bottom: 1px solid #D5D5D5;
+}
+.shop{
+    height:44px;
+    line-height: 44px;
+    border-top: 1px solid #D5D5D5;
+    margin: 10px 0;
+    font-size:14px;
+    color:#333333;
+    letter-spacing:-0.34px;
+}
+.shopming{
+    margin-left: 16px;
+}
+.shopname{
+    margin-left: 45px;
+}
+.money{
+    height:110px;
+    border-top: 1px solid #D5D5D5;
+    padding: 18px 0 0 16px;
+                    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.moneybi{
+    width:12px;
+    height:24px;
+    display:block;
+    font-size:24px;
+    color:#333333;
+    letter-spacing:-0.58px;
+    float: left;
+}
+.moneyru{
+     border:none;
+ 	width:100px;
+    font-size: 24px;
+    letter-spacing: -0.58px;
+}
+.moneyname{
+    font-size:15px;
+    color:#333333;
+    letter-spacing:-0.37px;
+}
+.fukuan{
+    margin: 35px auto 0;
+    background:#F5A623;
+    border-radius:5px;
+    width:300px;
+    height:44px;
+    font-size:17px;
+    color:#ffffff;
+    letter-spacing:-0.41px;
+    display:block;
+    border:none;
+}
+input[type=button], input[type=submit], input[type=file], button { 
+	cursor: pointer; 
+	-webkit-appearance: none; 
+}

@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+        <title>管理平台 | 国有支付 移动应用支付接口</title>
+        <meta name="description" content="国有支付 是全新的支付接入方式，开发者不再需要编写冗长的代码，简单几步就可以让你的应用获拥支付功能。让你的移动应用接入支付像大厦接入电力一样简单。">
+        <meta name="keywords" content="国有支付,支付接口,移动支付,应用内支付,微信支付,银联接口,支付宝接口">
+        <link rel="stylesheet" type="text/css" href="../css/conn.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/shopguan.css" />
+        <link rel="stylesheet" type="text/css" href="../css/tongcheck.css"/>
+    </head>
+    <body style="overflow-y:scroll;">
+        <div id="p-header">    
+            <div class="dHeader clearfix">
+                <div class="pull-left clearfix" id="dynamicHeader">    
+                    <a href="javascript:;" class="DHCbtn left logo">
+                        <img src="../images/apple-icon-96x96-precomposed.png" class="block" width="48" height="48" alt="">
+                        <!--[if lte IE 8]><i style="letter-spacing: 48px;">&nbsp;</i><![endif]-->
+                    </a>
+                </div>
+
+                <div class="dropDownMenu right myHead" id="accountMenu">
+                    <span class="menuBtn DHCbtn WL out" style="font-size:16px">退出</span>
+                    <!-- <ul class="menuWrap" style="display: none;">
+                        <li><a href="#" id="out" class="btn btnNone btn-block logout">退出登录</a></li>
+                    </ul> -->
+                </div>
+            </div>
+        </div>
+
+
+        <div id="p-body">
+            <div class="defaultPage clearfix">
+                <div class="mainWrap">
+                    <div class="sideBar">
+                        <div class="appSwitch active" id="app_menu">
+                            <div class="menuBtn">
+                                <div class="mb_appName">国有支付</div>
+                            </div>
+                        </div>
+                        <div id="module_menu">
+                        	<ul>
+                                <li data-module="orderreview" class="bar_item">
+                                <a href="../html/gailan.shtml" class="">
+               交易概览
+                                </a>
+                                </li>
+                            </ul>
+                             <div class="title">
+                                商户管理
+                            </div>
+                            <ul>
+                                <li data-module="batchpayment" class="bar_item">
+                                <a href="../html/shopcheck.shtml">商户查询</a></li>
+                                <li data-module="batchpayment" class="bar_item">
+                                <a href="../html/shopinfo.html">商户信息</a></li>
+                                <!--<li data-module="orderreview" id="liucha" class="bar_item">
+                                <a href="forget.html" >
+                                        修改密码
+                                </a>
+                                </li>-->
+                            </ul> 
+                            <div class="title">
+                                交易管理
+                            </div>
+                            <ul>
+                                <li data-module="orderreview" id="liucha" class="bar_item">
+                                <a href="../html/liushui.shtml" >
+               交易查询
+                                </a>
+                                </li>
+                                
+                            </ul>
+                             <div class="title">
+                                支付通道
+                            </div>
+                            <ul>
+                                <li data-module="orderreview" class="bar_item">
+                                <a href="../html/tongcheck.html" class="">
+                                        通道查询
+                                </a>
+                                </li>
+                            </ul>
+                            <!--<div class="title">
+                                账号管理
+                            </div>
+                            <ul>
+                                <li data-module="orderreview" class="bar_item">
+                                <a href="gaimi.html" class="">
+                                        修改密码
+                                </a>
+                                </li>
+                            </ul>-->
+                            <div class="title">
+                                财务对账
+                            </div>
+                            <ul>
+                                <li data-module="orderreview" id="liucha" class="bar_item">
+                                <a href="../html/fee.shtml" >
+                                        分润统计
+                                </a>
+                                </li>
+                            </ul>
+                            <div class="title">
+                                账户管理
+                            </div>
+                            <ul>
+                                <li data-module="orderreview" id="liucha" class="bar_item">
+                                <a href="../html/password.html" >
+                                        修改密码
+                                </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div id="p_module_cont" class="mainCon">
+                        <div class="funcArea">
+                            <div class="mc_title">
+                                <h2 class="pull-left">通道查询</h2>
+                                
+                                <div class="pull-right" style="margin: 16px 32px;">
+                                    <!-- <div class="pull-right">
+                                        <a href="addshop.html"><button class="btn btnBlueF pull-right" disabled="disabled">创建商户</button></a></div> -->
+                                </div>
+                            </div>
+
+                            </div>
+                            <div id="paymentList" class="orderList">
+                                <table>
+                                    <thead class="search" style="border-bottom:1px solid #EDF0F2 !important;background:#fff;">
+                                        <tr>
+                                            <th class="thtype operate">
+                                                <!--<select name=""class="pull-left form-control juli">
+                                                	<option value="0">选择支付方式</option>
+                                                	<option value="1">微信支付</option>
+                                                	<option value="2">京东支付</option>
+                                                	<option value="3">支付宝</option>
+                                                </select>--> <input class="pull-right form-control juli" type="text" id="trans_id" placeholder="请输入关键字"/>
+                                            </th>  
+                                            <th class="thtype operate">
+                                               <input class="pull-left form-control juli" style="width:80px;" type="button" id="shopcheck" value="查询" />
+                                            </th>  
+                                            <th class="thtype operate">
+                                                
+                                            </th>  
+                                            <th class="thtype operate">
+                                                
+                                            </th>  
+                                            <th class="thtype amount">
+                                                
+                                            </th>
+                                            <th class="thtype operate">
+                                                <a href="../html/addshop.html"><input class="pull-left form-control juli" style="cursor: pointer;width:92px;" type="button"value="添加商户" /></a>
+                                            </th>                                            
+                                        </tr>
+                                    </thead>
+                                    <thead>
+                                        <tr>                                            
+                                            <th class="thtype date" style="padding-left:0;">
+                                                商户号
+                                            </th>
+                                            <th class="thtype date">
+                                                商户简称
+                                            </th>
+                                            <th class="thtype amount ">
+                                                结算时效
+                                            </th>
+                                            <th class="thtype detail">
+                                                联系人
+                                            </th>
+                                            <th class="thtype amount">
+                                                手机号码 
+                                            </th>
+                                            <th class="thtype operate">
+                                                订单创建日期
+                                            </th>                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tBody">
+                                    </tbody>
+                                </table>
+                                <div class="tcdPageCode"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="mainFooter">
+                    <span> </span>
+                    <div class="pull-right">
+                        <a href="#" class="copyright"></a>
+                    </div>
+                </div>
+            </div>
+    
+        <script type="text/javascript" src="../js/jquery.js"></script>
+        <script type="text/javascript"src="../js/jquery.page.js"></script>
+        <!--<script type="text/javascript" src="../js/liushui.js"></script>-->
+        <script type="text/javascript" src="../js/out.js"></script>
+        <script type="text/javascript" src="../js/WdatePicker.js"></script>
+        <script src="../js/jquery.cookie.js" type="text/javascript"></script>
+    </body>
+</html>

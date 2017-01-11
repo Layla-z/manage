@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="GB2312">
+		<title>国有支付后台系统运行维护系统V1.0</title>
+		<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+		<style>
+			header {
+				background-color: black;
+				color: white;
+				text-align: center;
+				padding: 5px;
+			}
+			
+			nav {
+				line-height: 30px;
+				background-color: #eeeeee;
+				height: 300px;
+				width: 100px;
+				float: left;
+				padding: 5px;
+			}
+			
+			section {
+				width: 350px;
+				float: left;
+				padding: 10px;
+			}
+			
+			footer {
+				background-color: black;
+				color: white;
+				clear: both;
+				text-align: center;
+				padding: 5px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<header>
+			<h1>国有支付后台系统运行维护系统 V1.0</h1>
+		</header>
+
+		<nav>
+		  <button type="submit" id="btn_system_info">系统信息</button>
+			<br> 
+		  <button type="submit" id="btn_host_info">后台信息</button>
+			<br> 
+		  <button type="submit" id="btn_cgi_info">查看CGI日志</button>
+			<br>
+		  <button type="submit" id="btn_ads_info">查看ADS日志</button>
+			<br>
+		</nav>
+
+		<section>
+      <p> 信息输出 </p>
+			<br> 
+			      
+			<p id="edMsg"> </p>
+		</section>
+
+		<footer>
+			国有支付技术有限公司 王一 2016-12-21
+		</footer>
+		
+		<script>
+		$(document).ready(function()
+		{
+		  $("#btn_system_info").click(function()
+		  {
+		    $('#edMsg').load('../ads_app');
+		  })
+		})
+</script>
+
+	</body>
+
+</html>

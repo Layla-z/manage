@@ -1,0 +1,24 @@
+#vericode{
+	width: 212px;
+}
+#send_mobile_vericode{
+	position: absolute;
+	top: 0px;
+    right: 0px;
+    width: 112px;
+	color: #F5A623;
+	cursor: pointer;
+}
+#create_user_info{
+	background: #F5A623;
+	width: 245px;
+	height: 45px;
+	color: #ffffff;
+}
+.orange{
+	color: #F5A623;
+	cursor: pointer;
+}
+.top{
+	margin-top: 10px;
+}

@@ -1,0 +1,87 @@
+.orderList table thead tr th.thtype{
+    /*width:12.5%;*/
+    text-align: center;
+}
+
+#tBody tr td{
+    text-align: center;
+}
+#tBody tr:nth-child(even){
+    background:#F7F9FA;
+}
+#tBody tr:hover{
+    background:#f5a623;
+    color:#fff;
+    cursor:pointer;
+}
+.tcdPageCode a{ text-decoration:none;}
+.tcdPageCode a:hover{ text-decoration:none;}
+.tcdPageCode{margin-top: 45px;;text-align: center;color: #ccc;}
+.tcdPageCode a{display: inline-block;color: #f5a623;display: inline-block;height: 25px; line-height: 25px;  padding: 0 10px;border: 1px solid #ddd; margin: 0 2px;border-radius: 4px;vertical-align: middle;}
+.tcdPageCode a:hover{text-decoration: none;border: 1px solid #f5a623;}
+.tcdPageCode span.current{display: inline-block;height: 25px;line-height: 25px;padding: 0 10px;margin: 0 2px;color: #fff;background-color: #f5a623; border: 1px solid #f5a623;border-radius: 4px;vertical-align: middle;}
+.tcdPageCode span.disabled{ display: inline-block;height: 25px;line-height: 25px;padding: 0 10px;margin: 0 2px; color: #bfbfbf;background: #f2f2f2;border: 1px solid #bfbfbf;border-radius: 4px;vertical-align: middle;}
+.mainCon {
+    position: relative;
+}
+.tcdPageCode {
+    margin: 10px auto;
+}
+.form-control{
+    width:163px;
+}
+.juli{
+   /*  margin: 16px 15px; */
+    color:#000;
+}
+#check,#check1{
+    width:100px;
+    cursor:pointer;
+    font-size: 14px;
+    color:#000;
+}
+.katype{
+    width:68px;
+    height: 42px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #000;
+    background-color: #fff;
+    background-image: none;
+    border: 2px solid #f7f9fa;
+    border-radius: 3px;
+}
+.Wdate {
+    width: 96px;
+    padding: 2px;
+    height:40px !important;
+}
+.togcolor{
+	border-color: #f5a623  !important;
+	color: #f5a623;
+}
+.kongborder{
+	border: none !important;
+	width: 50%;
+	float: left;
+	padding: 0 !important;
+}
+.orderList table thead:nth-child(1) tr th {
+	padding: 6px 8px;
+}
+.orderList table thead:nth-child(2){
+	background-color: #F9F9F9;
+}
+.orderList table thead:nth-child(3){
+	background-color: #F78A8A;
+}
+.orderList table thead:nth-child(3) tr th {
+	color: #ffffff;
+	padding: 4px 8px;
+}
+#total_amount,#total_fee,#total_count{
+	color:#F19D15 ;
+	font-size: 16px;
+}
+
+ 

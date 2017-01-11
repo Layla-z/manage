@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+        <title>管理平台 | 国有支付 移动应用支付接口</title>
+        <meta name="description" content="国有支付 是全新的支付接入方式，开发者不再需要编写冗长的代码，简单几步就可以让你的应用获拥支付功能。让你的移动应用接入支付像大厦接入电力一样简单。">
+        <meta name="keywords" content="国有支付,支付接口,移动支付,应用内支付,微信支付,银联接口,支付宝接口">
+        <link rel="stylesheet" type="text/css" href="../css/conn.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/shopguan.css" />
+		<link rel="stylesheet" type="text/css" href="../css/liushui.css"/>
+    </head>
+    <style>
+    	
+    	.orderList table thead tr th.date, .orderList table thead tr th.channel {
+           width: 100px;
+         }
+         .orderList table thead tr th.operate {
+           width: 140px;
+         }
+         .orderList table thead tr th.thtype{
+		    width:12.5%;
+		    text-align: center;
+		}
+    </style>
+    <body style="overflow-y:scroll;">
+        <div id="p-body">
+            <div class="defaultPage clearfix">
+                <div class="mainWrap">
+                    <!--#include virtual="menu.html"-->
+                    <div id="p_module_cont" class="mainCon">
+                        <div class="funcArea">
+                            <div class="mc_title">
+                            	<img class="user user1" src="../images/user.png"/><span class="user user2">用户名</span>
+                            	<img class="user" src="../images/out.png"/>
+                                <h2 class="pull-left">提现查询</h2>
+                                <div class="pull-right" style="margin: 23px 32px;">
+                                    <span class="menuBtn DHCbtn WL out" style="font-size:18px;cursor: pointer;">退出</span>
+                                </div>
+                            </div>
+
+                            </div>
+                            <div id="paymentList" class="orderList">
+                                <table>
+                                    <thead class="search" style="border-bottom:1px solid #EDF0F2 !important;background:#fff;">
+                                        <tr>
+                                            <th class="thtype amount" style="padding-left:0;text-align: right;">
+                                               起始日期&nbsp;&nbsp;
+                                            </th>
+                                            <th class="thtype amount" style="text-align: left;">
+                                            	 <input class="Wdate startdate" id="beginDate" style="border: 2px solid #f7f9fa;" type="text" onClick="WdatePicker()">
+                                            </th>
+                                            <th class="thtype amount" style="text-align: right;">
+                                                  截止日期&nbsp;&nbsp;
+                                            </th>
+                                            <th class="thtype amount" style="text-align: left;">
+                                             <input class="Wdate enddate" id="endDate" style="border: 2px solid #f7f9fa;" type="text" onClick="WdatePicker()">
+                                            </th>
+                                            <!--<th class="thtype amount">
+                                                <input class="pull-left form-control juli" type="text" id="trans_id" placeholder="请输入流水号" />
+                                            </th>-->
+                                            <th class="thtype amount">
+                                                <input class="pull-left form-control juli" type="button" id="check" value="查询" />
+                                            </th>
+                                           <!-- <th class="thtype amount">
+                                               <input class="pull-left form-control juli" type="button" id="check1" value="查询下级" />
+                                            </th>-->
+                                        </tr>
+                                        <!--<tr>
+                                            <th class="thtype date" style="padding-left:0;">
+                                            	<input type="button" class="form-control kongborder" style="background:#FFF;"value="" readonly />
+                                            	<input type="button" id="succ" data-value="1"class="form-control kongborder" style="cursor: pointer;"value="成功" />
+                                            </th>
+                                            <th class="thtype amount">
+                                            	<input type="button" id="wait" data-value="3"class="form-control kongborder" style="cursor: pointer;"value="待付" />
+												<input type="button" id="fail" data-value="2"class="form-control kongborder" style="cursor: pointer;" value="失败" />
+                                            </th>
+                                        <tr/>-->
+                                    </thead>
+                                    	
+                                 <thead>
+                                        <!--<tr>
+                                        	<th class="thtype amount" style="padding-left:0;">
+                                                交易笔数
+                                            </th>
+                                            <th class="thtype detail" id="total_count">
+                                            </th>                                         
+                                            <th class="thtype date" style="padding-left:0;">
+                                                交易总额
+                                            </th>
+                                            <th class="thtype detail" id="total_amount">
+                                            </th>
+                                            <th class="thtype amount ">
+                                                手续费总额
+                                            </th>
+                                            <th class="thtype detail" id="total_fee">
+                                            </th>
+                                            <th class="thtype amount">
+                                            </th>
+                                            <th class="thtype amount">
+                                            </th> 
+                                            
+                                        </tr>-->
+                                    </thead>
+                                    <thead>
+                                        <tr>                                            
+                                            <th class="thtype date" style="padding-left:0;">
+                                                流水号
+                                            </th>
+                                            <th class="thtype date">
+                                                提现金额
+                                            </th>
+                                            <th class="thtype amount ">
+                                                提现手续费
+                                            </th>
+                                            <th class="thtype detail">
+                                                实际到账金额
+                                            </th>
+                                            <th class="thtype amount">
+                                                提现状态 
+                                            </th>
+                                           
+                                            <th class="thtype operate">
+                                                订单创建日期
+                                            </th>  
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tBody">
+                                    </tbody>
+                                </table>
+                                <div class="tcdPageCode" id="tcdPageCode"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="mainFooter">
+                    <span> </span>
+                    <div class="pull-right">
+                        <a href="#" class="copyright"></a>
+                    </div>
+                </div>
+            </div>
+		
+		<script type="text/javascript" src="../js/global.js?v=Math.random()" ></script>
+	    <script type="text/javascript" src="../js/mch.js?v=Math.random()" ></script>
+	    <script type="text/javascript" src="../js/mch_global.js?v=Math.random()" ></script>
+	    <script type="text/javascript" src="../js/wth.js?v=Math.random()" ></script>
+        <script type="text/javascript" src="../js/WdatePicker.js?v=Math.random()"></script>
+        
+        <script type="text/javascript" src="../js/jquery.js?v=Math.random()"></script>
+        <script type="text/javascript" src="../js/jquery.page.js?v=Math.random()"></script>
+        <script type="text/javascript" src="../js/jquery.cookie.js?v=Math.random()" ></script>
+        <script type="text/javascript" src="../js/query_cash.js"></script>
+        <script type="text/javascript" src="../js/baseRequest.js?v=Math.random()"></script>
+        <script type="text/javascript" src="../js/out.js?v=Math.random()"></script>
+     	<script type="text/javascript" src="../js/user_type.js?v=Math.random()"></script>
+        <script type="text/javascript">
+        	LiushuiWork.init();
+        </script>
+    </body>
+</html>
